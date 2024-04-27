@@ -45,7 +45,70 @@ body {
 /* ********************************** */
 /*       SECCIÓN DE PRODUCTOS         */
 /* ********************************** */
+.container-principal-productos{
+    margin-bottom: 200px; 
+}
+.titulo-productos {
+    text-align: center; /* Centrar el contenido */
+    margin-top: 20px; /* Espacio de 20px arriba */
+    margin-bottom: 20px; /* Espacio de 20px abajo */
+}
 
+h2.titulo-productos {
+    margin-top: 10px; /* Espacio de 10px arriba */
+    margin-bottom: 10px; /* Espacio de 10px abajo */
+    color: var(--color-titulos);
+    font-size: 30px;
+    font-family: var(--text-titulos);
+}
+.container-productos{
+    margin: 40px auto;
+    box-shadow: 0 0 7px #222;
+    width: 80%;
+    height: calc((100vh - 220px)*2);
+  }
+.header-productos {
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    border: none;
+    padding: 1em 1.5em;
+    color: #fff;
+    width: 200px;
+    cursor: pointer;
+    background-color: var(--color-background-oscuro);
+    font-size: 1em;
+    font-family: var(--text-parrafos);
+    font-weight: 800;
+}
+.btn:focus{
+    background-color:var(--color-btn);
+}
+.contenido-productos {
+    width: 100%;
+    position: relative;
+}
+/*.content_text {
+    width: 100%;
+    position: absolute;
+    transform: scale(0);
+    transition: .4s;
+    padding: .5em;
+    background-color: #fff;
+ }*/
+.content_text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinea las cards al centro */
+}
+.block{
+    transform: scale(1);
+    z-index: 10;
+}
+.hidden {
+    display: none;
+}
 
 
 /* ********************************** */

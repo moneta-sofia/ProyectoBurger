@@ -28,6 +28,11 @@ body {
 /*       MENÚ DE NAVEGACIÓN           */
 /* ********************************** */
 
+
+#opcionesMobile{
+    display: none;
+}
+
 .navbarMobile{
     display: none;
 }
@@ -41,6 +46,7 @@ header{
     width: 100vw;
     display: flex;
     justify-content: center;
+    position: absolute;
 }
 
 .navbarDesktop{
@@ -62,7 +68,6 @@ header{
 
 }
 
-
 .logoContainer{
     display: flex;
     justify-content: center;
@@ -77,6 +82,13 @@ header{
 
 .opciones{
     margin: 0 20px;
+}
+
+/* Mobile */
+
+#opcionesMobile{
+    display: flex;
+    background-color: #FFBE33;
 }
 
 
@@ -150,8 +162,6 @@ header{
     margin: 10px;
     border: 0;
 }
-
-
 
 
 

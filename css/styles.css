@@ -28,6 +28,10 @@ body {
 /*       MENÚ DE NAVEGACIÓN           */
 /* ********************************** */
 
+.navbarMobile{
+    display: none;
+}
+
 header a{
     color: var(--color-titulos);
     text-decoration: none;
@@ -39,7 +43,7 @@ header{
     justify-content: center;
 }
 
-.navbar{
+.navbarDesktop{
     display: flex;
     width: 90vw;
     margin: 5vh 0 0 0;
@@ -51,9 +55,11 @@ header{
     border-radius:  50px 15px 15px 50px ;
 }
 
-.logo{
-    width: 70px;
-    height: 70px;
+#logoDesktop{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+
 }
 
 
@@ -102,3 +108,79 @@ header{
 /* ********************************** */
 /*          PIE DE PÁGINA             */
 /* ********************************** */
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    
+
+
+/* ********************************** */
+/*       MENÚ DE NAVEGACIÓN           */
+/* ********************************** */
+
+#logoMobile{
+    width: 55px;
+    height: 55px;
+    margin: 10px;
+}
+
+.navbarDesktop{
+    display: none;
+}
+
+.navbarMobile{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.menuButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-btn);
+    padding: 1px 15px;
+    border-radius: 100px;
+    margin: 10px;
+    border: 0;
+}
+
+
+
+
+
+    
+/* ********************************** */
+/*            BANNER                  */
+/* ********************************** */
+
+
+
+/* ********************************** */
+/*       SECCIÓN ABOUT US             */
+/* ********************************** */
+
+
+
+/* ********************************** */
+/*       SECCIÓN DE PRODUCTOS         */
+/* ********************************** */
+
+
+
+/* ********************************** */
+/*            FORMULARIO              */
+/* ********************************** */ 
+
+
+
+/* ********************************** */
+/*          PIE DE PÁGINA             */
+/* ********************************** */
+  }

@@ -11,12 +11,12 @@
     --text-titulos: "Mochiy Pop One", sans-serif;
     /*CON FONDO OSCURO*/
     --color-background-oscuro:#2a2a2a;
-    --color-titulos:#EFF6F5;
-    --color-parrafos: #A1A5A6;
+    --color-titulos-oscuro:#EFF6F5;
+    --color-parrafos-oscuro: #A1A5A6;
     /*CON FONDO CLARO*/
     --color-background-claro: #EFF6F5;
-    --color-titulos:#000000;
-    --color-parrafos: #2a2a2a;
+    --color-titulos-claro:#000000;
+    --color-parrafos-claro: #2a2a2a;
     --color-card: #d9d9d9;    
 }
 body {
@@ -46,7 +46,7 @@ body {
 /*       SECCIÓN DE PRODUCTOS         */
 /* ********************************** */
 .container-principal-productos{
-    margin-bottom: 200px; 
+    margin-bottom:220px; 
 }
 .titulo-productos {
     text-align: center; /* Centrar el contenido */
@@ -56,20 +56,25 @@ body {
 
 h2.titulo-productos {
     margin-top: 10px; /* Espacio de 10px arriba */
-    margin-bottom: 10px; /* Espacio de 10px abajo */
-    color: var(--color-titulos);
+    color: var(--color-titulos-claro);
     font-size: 30px;
     font-family: var(--text-titulos);
 }
 .container-productos{
     margin: 40px auto;
     box-shadow: 0 0 7px #222;
-    width: 80%;
-    height: calc((100vh - 220px)*2);
-  }
+    width: 90%;
+    height: calc((100vh - 350px)*2); 
+}
 .header-productos {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+}
+button.btn{
+    font-size: 20px;
+    font-family: var(--text-titulos);
+    font-weight: 500;
 }
 .btn{
     border: none;
@@ -81,6 +86,9 @@ h2.titulo-productos {
     font-size: 1em;
     font-family: var(--text-parrafos);
     font-weight: 800;
+}
+button.marked {
+    background-color: var(--color-btn);
 }
 .btn:focus{
     background-color:var(--color-btn);
@@ -110,6 +118,189 @@ h2.titulo-productos {
     display: none;
 }
 
+/* card productos */
+.container-card{
+    /*background-color: #000000;*/
+    padding: 80px 30px 0px 50px;
+}
+.card-productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 10px 15px 0;
+    max-width: 300px;
+    min-height: 150px;
+    background-color: var(--color-card);
+    position: relative;
+    border-radius: 20px;
+}
+.img-productos{
+    max-width: 150px;
+    position: absolute;
+    bottom: 70%;
+    cursor: pointer;
+    transition: transform 0.3s; 
+    margin-bottom: 10px;
+}
+.img-productos-pizza{
+    max-width: 120px;
+    position: absolute;
+    bottom: 70%;
+    cursor: pointer;
+    transition: transform 0.3s; 
+    margin-bottom: 10px;
+}
+.img-productos:hover, .img-productos-pizza:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% al pasar el cursor sobre ella */
+}
+h1.nombre-productos{
+    font-size: 18px;
+    font-weight: 800;
+    font-family: var(--text-titulos);
+    color: var(--color-background-oscuro);
+    text-align: center;
+    margin-bottom: 20px;
+}
+h2.descripcion-productos{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: var(--text-parrafos);
+    color: #400F0F;
+    text-align: center;
+    margin-bottom: 10px; /* Reducido el margen inferior */
+    word-wrap: break-word; /* Permite el desbordamiento del texto */
+}
+
+
+
+/* Definición de emojis para cada botón */
+.btn[data-number="1"]::after {
+    content: "🍔";
+}
+
+.btn[data-number="2"]::after {
+    content: "🍕";
+}
+
+.btn[data-number="3"]::after {
+    content: "🌭";
+}
+
+.btn[data-number="4"]::after {
+    content: "🥖";
+}
+ /* Media query para dispositivos móviles */
+ @media only screen and (max-width: 600px) {
+    .container-productos {
+        height: auto; /* Establecer altura automática en dispositivos móviles */
+    }
+    h2.titulo-productos {
+        font-size: 24px; /* Reducir el tamaño del título en dispositivos móviles */
+    }
+    .btn {
+        font-size: 0 !important; /* Oculta el texto */
+        padding: 0 !important; /* Elimina cualquier relleno */
+        width: 50px; /* Permite que el ancho sea automático */
+        border-radius: 10px;
+        height: 40px;
+    }
+
+    .btn::after {
+        content: attr(data-emoji); /* Mostrar el emoji definido en el atributo data-emoji */
+        font-size: 20px; /* Restablecer el tamaño de fuente para el emoji */
+         
+    }
+    .container-card {
+        margin-top: 10px;
+        padding: 10px; /* Reducir el relleno en dispositivos móviles */
+    }
+
+    .card-productos {
+        max-width: calc(100% - 20px); /* Ajustar el ancho máximo al tamaño del contenedor menos el relleno */
+    }
+
+    .img-productos {
+        max-width: 80%; /* Hace que la imagen de los productos se ajuste al ancho del contenedor */
+        max-height: 80px; /* Establecer un máximo de altura para la imagen */
+        width: auto; /* Ajustar automáticamente la anchura */
+        height: auto; /* Ajustar automáticamente la altura */
+        margin-bottom: 10px; /* Ajustar el margen inferior */
+    }
+
+    h1.nombre-productos {
+        font-size: 14px; /* Reducir el tamaño del título para dispositivos móviles */
+        margin-bottom: 5px; /* Ajustar el margen inferior del título */
+    }
+
+    h2.descripcion-productos {
+        font-size: 12px; /* Reducir el tamaño de la descripción para dispositivos móviles */
+        margin-bottom: 5px; /* Ajustar el margen inferior de la descripción */
+    }
+
+    .precio-producto {
+        font-size: 12px; /* Reducir el tamaño del precio para dispositivos móviles */
+    }
+}
+
+/* Media query para dispositivos entre 601px y 1024px (antes de la pantalla de notebook) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .container-productos {
+        height: auto;
+    }
+    h2.titulo-productos {
+        font-size: 24px; 
+    }
+    .btn,
+    button.btn {
+        width: 150px; /* Reducir el ancho de los botones */
+        padding: 0.8em 1.2em; /* Reducir el relleno de los botones */
+        font-size: 15px; /* Reducir el tamaño de fuente de los botones */
+    }
+    .container-card {
+        margin-top: 10px; /* Margen superior de las tarjetas */
+        padding: 10px; /* Reducir el relleno de las tarjetas */
+    }
+
+    /* Estilos para las tarjetas de productos */
+    .card-productos {
+        max-width: calc(100% - 20px); /* Ajustar el ancho máximo al tamaño del contenedor menos el relleno */
+    }
+
+    /* Estilos para las imágenes de productos */
+    .img-productos {
+        max-width: 80%; /* Hacer que la imagen se ajuste al ancho del contenedor */
+        max-height: 80px; /* Establecer un máximo de altura para la imagen */
+        width: auto; /* Ajustar automáticamente la anchura */
+        height: auto; /* Ajustar automáticamente la altura */
+        margin-bottom: 10px; /* Ajustar el margen inferior */
+    }
+
+    /* Estilos para los títulos de productos */
+    h1.nombre-productos {
+        font-size: 14px; /* Reducir el tamaño del título */
+        margin-bottom: 5px; /* Ajustar el margen inferior */
+    }
+
+    /* Estilos para las descripciones de productos */
+    h2.descripcion-productos {
+        font-size: 12px; /* Reducir el tamaño de la descripción */
+        margin-bottom: 5px; /* Ajustar el margen inferior */
+    }
+
+    /* Estilos para los precios de productos */
+    .precio-producto {
+        font-size: 12px; /* Reducir el tamaño del precio */
+    }
+}
+
+/* Media query para dispositivos con una resolución mayor a 1024px */
+@media only screen and (min-width: 1025px) {
+    .container-productos {
+        height: auto; /* Establecer altura automática en dispositivos dentro de este rango */
+    }
+}
 
 /* ********************************** */
 /*            FORMULARIO              */

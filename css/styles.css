@@ -96,13 +96,24 @@ header{
     background-color: #FFBE33;
     width: 85vw;
     height: 100vh;
-    display: none;
+    z-index: 100;
+    overflow: hidden;
 }
 
 #opcionesMobile svg, img{
     padding: 0 5px;
     height: 25px;
     width: 25px;
+}
+
+#fondoOscuro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.89);
+    z-index: 99; /* Z-index inferior al de #opcionesMobile */
 }
 
 .item{
@@ -113,7 +124,6 @@ header{
     padding: 1rem 2rem;
     background-color: transparent;
     border: none;
-
 }
 
 #logoDesplegablecontainer{
@@ -136,6 +146,14 @@ header{
     margin: 10px 5px;
     background-color: transparent;
     border: none;
+}
+
+.navbarAbierto{
+    display: flex !important;
+}
+
+.navbarCerrado{
+    display:none !important;
 }
 
 
@@ -209,10 +227,10 @@ header{
     margin: 10px;
     border: 0;
 }
-
+/* 
 #opcionesMobile{
     display: flex;
-}
+} */
 
 
 

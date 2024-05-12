@@ -64,7 +64,8 @@ h2.titulo-productos {
     margin: 40px auto;
     box-shadow: 0 0 7px #222;
     width: 90%;
-    height: calc((100vh - 350px)*2); 
+   /* height: calc((100vh - 350px)*2); */
+   height: auto;
 }
 .header-productos {
     display: flex;
@@ -93,88 +94,6 @@ button.marked {
 .btn:focus{
     background-color:var(--color-btn);
 }
-.contenido-productos {
-    width: 100%;
-    position: relative;
-}
-/*.content_text {
-    width: 100%;
-    position: absolute;
-    transform: scale(0);
-    transition: .4s;
-    padding: .5em;
-    background-color: #fff;
- }*/
-.content_text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Alinea las cards al centro */
-}
-.block{
-    transform: scale(1);
-    z-index: 10;
-}
-.hidden {
-    display: none;
-}
-
-/* card productos */
-.container-card{
-    /*background-color: #000000;*/
-    padding: 80px 30px 0px 50px;
-}
-.card-productos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 30px;
-    padding: 10px 15px 0;
-    max-width: 300px;
-    min-height: 150px;
-    background-color: var(--color-card);
-    position: relative;
-    border-radius: 20px;
-}
-.img-productos{
-    max-width: 150px;
-    position: absolute;
-    bottom: 70%;
-    cursor: pointer;
-    transition: transform 0.3s; 
-    margin-bottom: 10px;
-}
-.img-productos-pizza{
-    max-width: 120px;
-    position: absolute;
-    bottom: 70%;
-    cursor: pointer;
-    transition: transform 0.3s; 
-    margin-bottom: 10px;
-}
-.img-productos:hover, .img-productos-pizza:hover {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% al pasar el cursor sobre ella */
-}
-h1.nombre-productos{
-    font-size: 18px;
-    font-weight: 800;
-    font-family: var(--text-titulos);
-    color: var(--color-background-oscuro);
-    text-align: center;
-    margin-bottom: 20px;
-}
-h2.descripcion-productos{
-    font-size: 15px;
-    font-weight: 500;
-    font-family: var(--text-parrafos);
-    color: #400F0F;
-    text-align: center;
-    margin-bottom: 10px; /* Reducido el margen inferior */
-    word-wrap: break-word; /* Permite el desbordamiento del texto */
-}
-
-
-
 /* Definición de emojis para cada botón */
 .btn[data-number="1"]::after {
     content: "🍔";
@@ -191,44 +110,181 @@ h2.descripcion-productos{
 .btn[data-number="4"]::after {
     content: "🥖";
 }
+
+
+
+.contenido-productos {
+    width: 100%;
+    position: relative;
+    height: auto; 
+}
+.content_text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinea las cards al centro */
+}
+.block{
+    transform: scale(1);
+    z-index: 10;
+}
+.hidden {
+    display: none;
+}
+
+/* card productos */
+.container-card{
+    margin-bottom: 20px;
+    padding: 80px 30px 0px 10px;  /* arriba | derecha | abajo | izquierda */
+}
+.card-productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 10px 15px 0;
+    max-width: 300px;
+    min-height: 150px;
+    background-color: var(--color-card);
+    position: relative;
+    border-radius: 20px;
+}
+.img-productos, .img-productos-panchos{
+    max-width: 150px;
+    position: absolute;
+    bottom: 70%;
+    cursor: pointer;
+    transition: transform 0.3s; 
+    margin-bottom: 10px;
+}
+.img-productos-pizza{
+    max-width: 120px;
+    position: absolute;
+    bottom: 70%;
+    cursor: pointer;
+    transition: transform 0.3s; 
+    margin-bottom: 25px;
+}
+.img-productos:hover, .img-productos-pizza:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% al pasar el cursor sobre ella */
+}
+h1.nombre-productos{
+    font-size: 18px;
+    font-weight: 800;
+    font-family: var(--text-titulos);
+    color: var(--color-background-oscuro);
+    text-align: center;
+    margin-bottom: 20px;
+}
+h2.descripcion-productos{
+    font-size: 13px;
+    font-weight: 400;
+    font-family: var(--text-parrafos);
+    color: #400F0F;
+    text-align: center;
+    margin-bottom: 10px; /* Reducido el margen inferior */
+    word-wrap: break-word; /* Permite el desbordamiento del texto */
+}
+.contenedor-precio-button{
+    display: flex; /* Utilizar flexbox para organizar los elementos */
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+span.precio-producto{
+    font-size: 20px;
+    font-family: var(--text-parrafos);
+    font-weight: 700;
+    color: var(--color-titulos-claro);
+    margin-left: 30px; /* Ajusta el espacio entre el precio y el botón */
+}
+
+.btn-plus {
+    font-size: 24px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto más oscuro */
+    background-color:var(--color-btn); /* Color de fondo naranja */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Hacer que el borde sea circular */
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
+    line-height: 40px; /* Alineación vertical del texto */
+    text-align: center; /* Alineación horizontal del texto */
+    cursor: pointer; /* Cursor de tipo puntero al pasar sobre los botones */
+    outline: none; /* Sin contorno al hacer clic */
+    margin-right: 20px; /* Espacio desde el borde derecho */
+    float: right; /* Alinear a la derecha */
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-plus:hover {
+    transform: scale(1.1); 
+    background-color:var(--color-btn-hover);
+}
+
+
+/*******************************************************************/
  /* Media query para dispositivos móviles */
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 768px) {
     .container-productos {
         height: auto; /* Establecer altura automática en dispositivos móviles */
     }
     h2.titulo-productos {
         font-size: 24px; /* Reducir el tamaño del título en dispositivos móviles */
     }
+    div.header-productos{
+        margin-bottom: 20px;
+
+    }
     .btn {
         font-size: 0 !important; /* Oculta el texto */
-        padding: 0 !important; /* Elimina cualquier relleno */
-        width: 50px; /* Permite que el ancho sea automático */
-        border-radius: 10px;
+        width: 80px; /* Permite que el ancho sea automático */
+        /*border-radius: 10px; */
         height: 40px;
     }
 
     .btn::after {
         content: attr(data-emoji); /* Mostrar el emoji definido en el atributo data-emoji */
-        font-size: 20px; /* Restablecer el tamaño de fuente para el emoji */
-         
+        font-size: 30px; /* Restablecer el tamaño de fuente para el emoji */ 
+        margin-bottom: 10px; /* Ajusta el espacio debajo del emoji */ 
+        display: block;   
     }
     .container-card {
-        margin-top: 10px;
-        padding: 10px; /* Reducir el relleno en dispositivos móviles */
+        width: 80%; /* Establece un ancho fijo para los contenedores en dispositivos móviles */
+        margin: 0 auto; /* Centra los contenedores horizontalmente */
+        margin-bottom: 20px;
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-top: 15px;    
+        padding: 30px 120px 0px 120px;  
     }
 
     .card-productos {
         max-width: calc(100% - 20px); /* Ajustar el ancho máximo al tamaño del contenedor menos el relleno */
+        width: auto;
     }
 
     .img-productos {
-        max-width: 80%; /* Hace que la imagen de los productos se ajuste al ancho del contenedor */
-        max-height: 80px; /* Establecer un máximo de altura para la imagen */
+        max-width: 120%; /* Hace que la imagen de los productos se ajuste al ancho del contenedor */
+        max-height: 120px; /* Establecer un máximo de altura para la imagen */
         width: auto; /* Ajustar automáticamente la anchura */
         height: auto; /* Ajustar automáticamente la altura */
-        margin-bottom: 10px; /* Ajustar el margen inferior */
+        margin-bottom: 18px; /* Ajustar el margen inferior */
     }
-
+    .img-productos-panchos {
+        max-width: 80%; 
+        max-height: 100px; /* Mantén el máximo de altura para la imagen */
+        width: auto; /* Ajusta automáticamente la anchura */
+        height: auto; /* Ajusta automáticamente la altura */
+        margin-bottom: 15px; /* Ajusta el margen inferior */
+    }
+    .img-productos-pizza{
+        max-width: 100%; /* Hace que la imagen de los productos se ajuste al ancho del contenedor */
+        max-height: 120px; /* Establecer un máximo de altura para la imagen */
+        width: auto; /* Ajustar automáticamente la anchura */
+        height: auto; /* Ajustar automáticamente la altura */
+        margin-bottom: 20px; /* Ajustar el margen inferior */
+        margin-top: 15px;
+    }
     h1.nombre-productos {
         font-size: 14px; /* Reducir el tamaño del título para dispositivos móviles */
         margin-bottom: 5px; /* Ajustar el margen inferior del título */
@@ -241,66 +297,100 @@ h2.descripcion-productos{
 
     .precio-producto {
         font-size: 12px; /* Reducir el tamaño del precio para dispositivos móviles */
+        margin-right: 10px;
     }
 }
 
-/* Media query para dispositivos entre 601px y 1024px (antes de la pantalla de notebook) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+/* Media query para dispositivos entre 769px y 1024px (antes de la pantalla de notebook) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
     .container-productos {
-        height: auto;
+        height: auto; /* Establecer altura automática en dispositivos dentro de este rango */
     }
-    h2.titulo-productos {
-        font-size: 24px; 
+    .header-productos {
+        margin-bottom: 10px; /* Ajusta el margen inferior */
+        /* Agrega otros estilos necesarios para mantener el diseño deseado */
     }
-    .btn,
-    button.btn {
-        width: 150px; /* Reducir el ancho de los botones */
-        padding: 0.8em 1.2em; /* Reducir el relleno de los botones */
-        font-size: 15px; /* Reducir el tamaño de fuente de los botones */
+    button.btn{
+        font-size: 15px;
+        font-family: var(--text-titulos);
+        font-weight: 500;
+    }
+    .btn{
+        width: 150px;
     }
     .container-card {
-        margin-top: 10px; /* Margen superior de las tarjetas */
-        padding: 10px; /* Reducir el relleno de las tarjetas */
+        margin-bottom: 20px;
+        padding: 60px 30px 0px 50px;  /* arriba | derecha | abajo | izquierda */
     }
-
-    /* Estilos para las tarjetas de productos */
     .card-productos {
-        max-width: calc(100% - 20px); /* Ajustar el ancho máximo al tamaño del contenedor menos el relleno */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
+        padding: 10px 15px 0;
+        max-width: 300px; /* Mantener el mismo ancho máximo */
+        min-height: 150px; /* Mantener la misma altura mínima */
+        background-color: var(--color-card);
+        position: relative;
+        border-radius: 20px;
     }
-
-    /* Estilos para las imágenes de productos */
     .img-productos {
-        max-width: 80%; /* Hacer que la imagen se ajuste al ancho del contenedor */
-        max-height: 80px; /* Establecer un máximo de altura para la imagen */
-        width: auto; /* Ajustar automáticamente la anchura */
-        height: auto; /* Ajustar automáticamente la altura */
-        margin-bottom: 10px; /* Ajustar el margen inferior */
+        max-width: 150px;
+        position: absolute;
+        bottom: 70%;
+        cursor: pointer;
+        transition: transform 0.3s; 
+        margin-bottom: 10px;
     }
-
-    /* Estilos para los títulos de productos */
+    .img-productos-pizza {
+        max-width: 120px;
+        position: absolute;
+        bottom: 70%;
+        cursor: pointer;
+        transition: transform 0.3s; 
+        margin-bottom: 25px;
+    }
+    .img-productos:hover, .img-productos-pizza:hover {
+        transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% al pasar el cursor sobre ella */
+    }
     h1.nombre-productos {
-        font-size: 14px; /* Reducir el tamaño del título */
-        margin-bottom: 5px; /* Ajustar el margen inferior */
+        font-size: 18px;
+        font-weight: 800;
+        font-family: var(--text-titulos);
+        color: var(--color-background-oscuro);
+        text-align: center;
+        margin-bottom: 20px;
     }
-
-    /* Estilos para las descripciones de productos */
     h2.descripcion-productos {
-        font-size: 12px; /* Reducir el tamaño de la descripción */
-        margin-bottom: 5px; /* Ajustar el margen inferior */
+        font-size: 13px;
+        font-weight: 400;
+        font-family: var(--text-parrafos);
+        color: #400F0F;
+        text-align: center;
+        margin-bottom: 10px; /* Reducido el margen inferior */
+        word-wrap: break-word; /* Permite el desbordamiento del texto */
     }
-
-    /* Estilos para los precios de productos */
-    .precio-producto {
-        font-size: 12px; /* Reducir el tamaño del precio */
+    .contenedor-precio-button {
+        display: flex; /* Utilizar flexbox para organizar los elementos */
+        justify-content: space-between; /* Espacio uniforme entre los elementos */
+        align-items: center; /* Centrar verticalmente los elementos */
+    }
+    span.precio-producto {
+        font-size: 20px;
+        font-family: var(--text-parrafos);
+        font-weight: 700;
+        color: var(--color-titulos-claro);
+        margin-left: 30px; /* Ajusta el espacio entre el precio y el botón */
     }
 }
 
-/* Media query para dispositivos con una resolución mayor a 1024px */
+  /*Media query para dispositivos con una resolución mayor a 1024px */
 @media only screen and (min-width: 1025px) {
     .container-productos {
         height: auto; /* Establecer altura automática en dispositivos dentro de este rango */
     }
-}
+}*
 
 /* ********************************** */
 /*            FORMULARIO              */

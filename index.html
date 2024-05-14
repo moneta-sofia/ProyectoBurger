@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- estilos Un CSS Reset es un conjunto de reglas CSS que se utiliza para reiniciar los estilos predeterminados de los navegadores -->
-    <link rel="stylesheet" href="./css/reset.css">   
+    <!-- estilos Un CSS Reset es un conjunto de reglas CSS que se utiliza para reiniciar los estilos predeterminados de los navegadores -->
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
-     <!-- fuente1 -->
+    <!-- fuente1 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-     <!-- fuente2 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- fuente2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- logo y título de la pestaña del navegador -->
     <link rel="shortcut icon" href="./img/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick-theme.css" />
+
     <title>Pica y Corre</title>
-    
+
+
 </head>
+
 <body>
+
+
     <!--MENÚ DE NAVEGACIÓN -->
-    <header >
+    <header>
 
         <!-- Desktop -->
         <nav class="navbarDesktop">
@@ -40,13 +53,15 @@
 
         <!-- Mobile -->
         <nav class="navbarMobile">
-            <button class="menuButton"  onclick=turnDesplegable()>
-                <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="30" viewBox="0 0 50 50" id="menuLogo" >
-                    <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"></path>
+            <button class="menuButton" onclick=turnDesplegable()>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" id="menuLogo">
+                    <path
+                        d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
+                    </path>
                 </svg>
             </button>
 
-            <div class="logoMobile">  
+            <div class="logoMobile">
                 <img src="./img/LOGO.svg" alt="Logo" id="logoMobile">
                 <!-- <p>PICA Y CORRE</p> -->
             </div>
@@ -56,8 +71,10 @@
         <div id="fondoOscuro" class="navbarCerrado"></div>
         <div id="opcionesMobile" class="navbarCerrado">
             <button id="close" onclick=turnDesplegable()>
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0 0 24 24" >
-                    <path d="M 4.9902344 3.9902344 A 1.0001 1.0001 0 0 0 4.2929688 5.7070312 L 10.585938 12 L 4.2929688 18.292969 A 1.0001 1.0001 0 1 0 5.7070312 19.707031 L 12 13.414062 L 18.292969 19.707031 A 1.0001 1.0001 0 1 0 19.707031 18.292969 L 13.414062 12 L 19.707031 5.7070312 A 1.0001 1.0001 0 0 0 18.980469 3.9902344 A 1.0001 1.0001 0 0 0 18.292969 4.2929688 L 12 10.585938 L 5.7070312 4.2929688 A 1.0001 1.0001 0 0 0 4.9902344 3.9902344 z"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0 0 24 24">
+                    <path
+                        d="M 4.9902344 3.9902344 A 1.0001 1.0001 0 0 0 4.2929688 5.7070312 L 10.585938 12 L 4.2929688 18.292969 A 1.0001 1.0001 0 1 0 5.7070312 19.707031 L 12 13.414062 L 18.292969 19.707031 A 1.0001 1.0001 0 1 0 19.707031 18.292969 L 13.414062 12 L 19.707031 5.7070312 A 1.0001 1.0001 0 0 0 18.980469 3.9902344 A 1.0001 1.0001 0 0 0 18.292969 4.2929688 L 12 10.585938 L 5.7070312 4.2929688 A 1.0001 1.0001 0 0 0 4.9902344 3.9902344 z">
+                    </path>
                 </svg>
             </button>
 
@@ -69,25 +86,31 @@
 
             <button class="item">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
-                    <path d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z"></path>
+                    <path
+                        d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z">
+                    </path>
                 </svg>
                 <div href="" class="opciones">Inicio</div>
             </button>
 
             <button class="item">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 32 32">
-                    <path d="M 16 3 C 8.8321388 3 3 8.832144 3 16 C 3 23.167856 8.8321388 29 16 29 C 23.167861 29 29 23.167856 29 16 C 29 8.832144 23.167861 3 16 3 z M 16 5 C 22.086982 5 27 9.9130223 27 16 C 27 22.086978 22.086982 27 16 27 C 9.9130183 27 5 22.086978 5 16 C 5 9.9130223 9.9130183 5 16 5 z M 16 9 A 1 1 0 0 0 16 11 A 1 1 0 0 0 16 9 z M 15.984375 12.986328 A 1.0001 1.0001 0 0 0 15 14 L 15 22 A 1.0001 1.0001 0 1 0 17 22 L 17 14 A 1.0001 1.0001 0 0 0 15.984375 12.986328 z"></path>
+                    <path
+                        d="M 16 3 C 8.8321388 3 3 8.832144 3 16 C 3 23.167856 8.8321388 29 16 29 C 23.167861 29 29 23.167856 29 16 C 29 8.832144 23.167861 3 16 3 z M 16 5 C 22.086982 5 27 9.9130223 27 16 C 27 22.086978 22.086982 27 16 27 C 9.9130183 27 5 22.086978 5 16 C 5 9.9130223 9.9130183 5 16 5 z M 16 9 A 1 1 0 0 0 16 11 A 1 1 0 0 0 16 9 z M 15.984375 12.986328 A 1.0001 1.0001 0 0 0 15 14 L 15 22 A 1.0001 1.0001 0 1 0 17 22 L 17 14 A 1.0001 1.0001 0 0 0 15.984375 12.986328 z">
+                    </path>
                 </svg>
                 <div href="" class="opciones">Sobre Nosotros</div>
             </button>
 
             <button class="item">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFp0lEQVR4nO2dWWwWVRSAv9JKadHWFRGNMT5oguiLayRRcE1E340EtwcSo8RERaNRY4wG1CC4by8uuAGtoBKCiCZFEMWqvIC4oTHgEkGbqrigvznxNDHNf+/MP3Nn/vlnzpecp85/77nnzNz13FMwDMMwDMMwDMMwDMMwYrKfihGYLuA04ApgPrAMeAf4FPgZqDnkJ31Gnl0KzNMyTtUyDQfjgPOBhcB7wJ8eIycVKXOj1nEe0Fl1b3QAF+mb+ksGBo8SqXMJcKHqUhkOAe4AvmuC0V3yLXA7cDAlRhq3CPitAAavOUR0ux84iBIhn/fciMGzllCGVEKXK7reUIau6WRgcwID/ANsARYDtwEXA1OBY4BeT329+sxU/Y389nlgq5bZqB4fASfSgrQBNzY4m/kCeAiYEWHkpOyvA+7DwJcN6PUHcL22qSXYF1jRwEzkceD0nHVs06/kCeDXmLouaYWp6yTg4xiN2Q3cAhzYbIVVh1t1ERel99sZfZ1BOBL4LKIBfwMPFMTwoxGdHlQdfW3YrC9a4aaYUcb/CphG8Zmuuvrasq1IU9VxuvfiU/gZoIfWoRd4LqJNA0UYE9p0quhTVDbTWpWbItr2crNnRzdH9PdzaH2ujVhDyHS7KRwP/O5R7GrKwxxPO8UGU/JWSJbomzxKyWyibDziae+HwD5F6XpWl2EPpQ7SpjWedotNcptyujbAfgQOpbxMBHY52j4MTMhDiYWet2Am5WeWp/0L8ljtugbelVSHlQ4b7AGOyLLi+xwV7wUmUx2OBf5y2EICATKhS/v4epXKrmLVeMphix+yWiFf7qhQ3oSjqB5H65dfzyYyTgTnLUdlL1Fdljls8kboiiZ4vC27h1XlHE+vEHS3dLYnnKOd6tIBfO+wzZUhK3rFUYmcr1adxzxHmEEY45n9nBmqkhbmLM+ugNguNSd4lt5V7n7+3w25QiuPI8OltxxQG/8x4LDRJQRgvqPwe0MUXhIWOGx0d4jCX3UUfmmIwkvCZQ4bLQ9RuCvaoRUiHPJiuid6IjXDjsKHNMDKBOf5iNguNfUKNiG2DcwBNPeFSU2RbrLUWkzEdqlZVICG1FpUxHZBDmIezegmSq2kMqRhLEGvxsq+xgEmxLFBkD0gwzAMwzCazFjgHmBnjlO4LRqFcSdwUpMuQchM5hTgLj372NrAVHyHbuOL7TI7D8hTvtbAgDyiriXM/CrgmwB6B7kdtKMADqipSC6gs8mOc4HPA+ortktNrWCyV+9uhWa2J94zjaSmVlB5MtCKc4wnztMcgN8IL6YcF8T4T2f8oqQms4Id9Gio+zXAhhgNfDZheEy7/jaq/A164XByRILA0jhgNDNiTAQWN+iE9hj3m6XOCxoos7QOQHMzDEYY7IWY3VGHPusrazBBPohSO2AkfcDGCMMtjbguGufNH0yYTKT0DhhxwrsJndCu2bN8v/0gRSaXSjhgZJCOGpxfG3VNSBzSF8P4cpiSlMo4QBiv+zM+g76uThDj90c8uz5ANpdKOQCdEq6LMOyKGOnT1gXKP105BwjdwNoIA+dh/Ezt5ApNlOR8RXHCmwmMPxCwDT2OOmT7OjXbHIWfQXHobvBLWKu/CcU0Rz2fhCjcNYDJrKJIdEdkMxmRNYGNj4ah16tLrrFmFvsuch3FokvT5bj0XZ3B/xGY66lvVqiMs7s9lfTrJyhTw6IkEVxVR89V+rcQjNc2u978mqa16c3Dy1lnM1+eYF+mU48Dd6rMS5C/4XCdwu5JqHvQ3qEzxhZAlrIp54P5toiUbLUYC7sgB/Kjs0Vtb6ITppBvQsKkem7PMmvYxJiHJFV1wPo8UraN1XTurtxpWcj7Be+CdmmfH7zb8dGrV1X7NGjJtWJOOwj3A4eRP5M0R0a9f7kyrMFjfTrVLGxGdcMwDMMwDMMwDMMwDIPC8C8hchxuKktc+AAAAABJRU5ErkJggg==">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFp0lEQVR4nO2dWWwWVRSAv9JKadHWFRGNMT5oguiLayRRcE1E340EtwcSo8RERaNRY4wG1CC4by8uuAGtoBKCiCZFEMWqvIC4oTHgEkGbqrigvznxNDHNf+/MP3Nn/vlnzpecp85/77nnzNz13FMwDMMwDMMwDMMwDMMwYrKfihGYLuA04ApgPrAMeAf4FPgZqDnkJ31Gnl0KzNMyTtUyDQfjgPOBhcB7wJ8eIycVKXOj1nEe0Fl1b3QAF+mb+ksGBo8SqXMJcKHqUhkOAe4AvmuC0V3yLXA7cDAlRhq3CPitAAavOUR0ux84iBIhn/fciMGzllCGVEKXK7reUIau6WRgcwID/ANsARYDtwEXA1OBY4BeT329+sxU/Y389nlgq5bZqB4fASfSgrQBNzY4m/kCeAiYEWHkpOyvA+7DwJcN6PUHcL22qSXYF1jRwEzkceD0nHVs06/kCeDXmLouaYWp6yTg4xiN2Q3cAhzYbIVVh1t1ERel99sZfZ1BOBL4LKIBfwMPFMTwoxGdHlQdfW3YrC9a4aaYUcb/CphG8Zmuuvrasq1IU9VxuvfiU/gZoIfWoRd4LqJNA0UYE9p0quhTVDbTWpWbItr2crNnRzdH9PdzaH2ujVhDyHS7KRwP/O5R7GrKwxxPO8UGU/JWSJbomzxKyWyibDziae+HwD5F6XpWl2EPpQ7SpjWedotNcptyujbAfgQOpbxMBHY52j4MTMhDiYWet2Am5WeWp/0L8ljtugbelVSHlQ4b7AGOyLLi+xwV7wUmUx2OBf5y2EICATKhS/v4epXKrmLVeMphix+yWiFf7qhQ3oSjqB5H65dfzyYyTgTnLUdlL1Fdljls8kboiiZ4vC27h1XlHE+vEHS3dLYnnKOd6tIBfO+wzZUhK3rFUYmcr1adxzxHmEEY45n9nBmqkhbmLM+ugNguNSd4lt5V7n7+3w25QiuPI8OltxxQG/8x4LDRJQRgvqPwe0MUXhIWOGx0d4jCX3UUfmmIwkvCZQ4bLQ9RuCvaoRUiHPJiuid6IjXDjsKHNMDKBOf5iNguNfUKNiG2DcwBNPeFSU2RbrLUWkzEdqlZVICG1FpUxHZBDmIezegmSq2kMqRhLEGvxsq+xgEmxLFBkD0gwzAMwzCazFjgHmBnjlO4LRqFcSdwUpMuQchM5hTgLj372NrAVHyHbuOL7TI7D8hTvtbAgDyiriXM/CrgmwB6B7kdtKMADqipSC6gs8mOc4HPA+ortktNrWCyV+9uhWa2J94zjaSmVlB5MtCKc4wnztMcgN8IL6YcF8T4T2f8oqQms4Id9Gio+zXAhhgNfDZheEy7/jaq/A164XByRILA0jhgNDNiTAQWN+iE9hj3m6XOCxoos7QOQHMzDEYY7IWY3VGHPusrazBBPohSO2AkfcDGCMMtjbguGufNH0yYTKT0DhhxwrsJndCu2bN8v/0gRSaXSjhgZJCOGpxfG3VNSBzSF8P4cpiSlMo4QBiv+zM+g76uThDj90c8uz5ANpdKOQCdEq6LMOyKGOnT1gXKP105BwjdwNoIA+dh/Ezt5ApNlOR8RXHCmwmMPxCwDT2OOmT7OjXbHIWfQXHobvBLWKu/CcU0Rz2fhCjcNYDJrKJIdEdkMxmRNYGNj4ah16tLrrFmFvsuch3FokvT5bj0XZ3B/xGY66lvVqiMs7s9lfTrJyhTw6IkEVxVR89V+rcQjNc2u978mqa16c3Dy1lnM1+eYF+mU48Dd6rMS5C/4XCdwu5JqHvQ3qEzxhZAlrIp54P5toiUbLUYC7sgB/Kjs0Vtb6ITppBvQsKkem7PMmvYxJiHJFV1wPo8UraN1XTurtxpWcj7Be+CdmmfH7zb8dGrV1X7NGjJtWJOOwj3A4eRP5M0R0a9f7kyrMFjfTrVLGxGdcMwDMMwDMMwDMMwDIPC8C8hchxuKktc+AAAAABJRU5ErkJggg==">
                 <div href="" class="opciones">Productos</div>
             </button>
 
             <button class="item">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADCklEQVR4nO2Zy29NURSHP7T1KAlK4jXy+gMoOmBAQlASERETjwEDaaJmjYaYlMYIKTERvZp0RBOphBkRA2aUjqoGQq4WbSQqVZPKTtaVlZVze88+9j1Hk/sle3Jz1mOfs/dav70vVKhQIQQzgQagFegB+oFR4LeMUfntPnAO2CI2mbMKaAc+AZOe4yNwGViZReJ1wC1gIkHidvwCbgKL00r+CPAtIpE8cBs4CmyQSVbLWAJsBI7JM/kI+6/A4XImXiVv3QZ+AuwFZnn4cs82Ak8j/N2QWEGZCzw0gQaAnQF87wbeGd+9EjMIVRHJdwLzQgUAaoGuiEkE+RJ22ZynfFwwsTpCbNi0ki82iUMkpM5Umxzp0aXifgEW/evSGZB1mha1ZmN3JOmwukntIn32mGa3wse4XRm7Wp0Vz1Qel3yajNY2ruFkxT6Vx4e4ArDByIPgXdGDKmBI5bM5jlGrMnC6pRhOSY4HEHPjJZZHp3q2Jc4EepSBE2ZRzAB+BEh+UobzVYzj6rl7cSbQrwycqixGW8Av0DZFnHr17Js4ExhRBq6ZZc1SI7lLout/Ddkz2/SDkuhlMYdpOIHPymAZ03AJ9SkDdwwMXUZLlU3LJt9NrJXgyTKV0anKpuWEbxltVgZ3ylBGS5VNS863ka1XBiNyq5CllBhW+bieEIu3yugA2bE/iZhznFWGL8mO5yoPn2XHAuC7MnZ3mWnTaPaN14HGMagcbCNd5gPvVfzrvg7WmpKXtqToVvGHkxzqm8wFU5pcNGX3YBInvcqBm0xWyV9L4qTGdNk1pLPmu03yDzwvjP+yXTlxdzNRuOa2NVB1ajQbtpB84svdK+aqu8Bq4LQ411/ohTS7as8O65qUrvO64iR68wVeKWdX5VZsIIbGGZED+ClRscvlPFEjf3DUizDLGXkwKWMo6Ya1/IwpygZNs0s6xuWtLyQQj4sEGpPq1CR9otCxm412ijuctmmTLxUU5/CRJPxa9sSOGM1sHXAGuCt2eXm7E7K8+kTPt8gh5b/4m7VCBaY5fwDlENrwg3MbPQAAAABJRU5ErkJggg==">                
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADCklEQVR4nO2Zy29NURSHP7T1KAlK4jXy+gMoOmBAQlASERETjwEDaaJmjYaYlMYIKTERvZp0RBOphBkRA2aUjqoGQq4WbSQqVZPKTtaVlZVze88+9j1Hk/sle3Jz1mOfs/dav70vVKhQIQQzgQagFegB+oFR4LeMUfntPnAO2CI2mbMKaAc+AZOe4yNwGViZReJ1wC1gIkHidvwCbgKL00r+CPAtIpE8cBs4CmyQSVbLWAJsBI7JM/kI+6/A4XImXiVv3QZ+AuwFZnn4cs82Ak8j/N2QWEGZCzw0gQaAnQF87wbeGd+9EjMIVRHJdwLzQgUAaoGuiEkE+RJ22ZynfFwwsTpCbNi0ki82iUMkpM5Umxzp0aXifgEW/evSGZB1mha1ZmN3JOmwukntIn32mGa3wse4XRm7Wp0Vz1Qel3yajNY2ruFkxT6Vx4e4ArDByIPgXdGDKmBI5bM5jlGrMnC6pRhOSY4HEHPjJZZHp3q2Jc4EepSBE2ZRzAB+BEh+UobzVYzj6rl7cSbQrwycqixGW8Av0DZFnHr17Js4ExhRBq6ZZc1SI7lLout/Ddkz2/SDkuhlMYdpOIHPymAZ03AJ9SkDdwwMXUZLlU3LJt9NrJXgyTKV0anKpuWEbxltVgZ3ylBGS5VNS863ka1XBiNyq5CllBhW+bieEIu3yugA2bE/iZhznFWGL8mO5yoPn2XHAuC7MnZ3mWnTaPaN14HGMagcbCNd5gPvVfzrvg7WmpKXtqToVvGHkxzqm8wFU5pcNGX3YBInvcqBm0xWyV9L4qTGdNk1pLPmu03yDzwvjP+yXTlxdzNRuOa2NVB1ajQbtpB84svdK+aqu8Bq4LQ411/ohTS7as8O65qUrvO64iR68wVeKWdX5VZsIIbGGZED+ClRscvlPFEjf3DUizDLGXkwKWMo6Ya1/IwpygZNs0s6xuWtLyQQj4sEGpPq1CR9otCxm412ijuctmmTLxUU5/CRJPxa9sSOGM1sHXAGuCt2eXm7E7K8+kTPt8gh5b/4m7VCBaY5fwDlENrwg3MbPQAAAABJRU5ErkJggg==">
                 <div href="" class="opciones">Contáctanos</div>
             </button>
 
@@ -100,23 +123,72 @@
 
     <main>
         <!-- BANNER -->
-        <section>
+
+        <section id="banner">
+            <div class="slides" id="asddas">
+                <div id="slide-1" class="eachSlider">
+                    <div class="eachBanner">
+                        <div class="imgbanner">
+                            <div class="imgContainer">
+                                <img src="img\Stacker-Doble.png" class="burgerImage" alt="Hamburguesa">
+                            </div>
+                        </div>
+                        <div class="textContainer">
+                            <h3>LA ACELERADA</h3>
+                            <p  class="textoChico">Contiene doble medallon, queso cheddar, bacon y pan</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="slide-2" class="eachSlider">
+                    <div class="eachBanner">
+                        <div class="imgbanner">
+                            <div class="imgContainer">
+                                <img src="img\burger1.png" class="burgerImage" alt="Hamburguesa">
+                            </div>
+                        </div>
+                        <div class="textContainer">
+                            <h3>LA ACELERADA</h3>
+                            <p class="textoChico">Contiene doble medallon, queso cheddar, bacon y pan</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="slide-3" class="eachSlider">
+                    <div class="eachBanner">
+                        <div class="imgbanner">
+                            <div class="imgContainer">
+                                <img src="img\burger2.png" class="burgerImage" alt="Hamburguesa">
+                            </div>
+                        </div>
+                        
+                        <div class="textContainer">
+                            <h3>LA ACELERADA</h3>
+                            <p class="textoChico">Contiene doble medallon, queso cheddar, bacon y pan</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
 
         </section>
 
         <!-- ABOUT US -->
         <section>
-            
+
         </section>
 
         <!-- PRODUCTS -->
         <section>
-                
+
         </section>
 
         <!-- FORMULARIO -->
         <section>
-                
+
         </section>
 
     </main>
@@ -126,6 +198,12 @@
 
     </footer>
 
-    <script src="./js/script.js"></script>
+
 </body>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/node_modules/slick-carousel/slick/slick.min.js"></script>
+<script src="js/script.js"></script>
+
 </html>

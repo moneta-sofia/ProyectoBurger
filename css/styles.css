@@ -254,6 +254,10 @@ element.style {
     align-items: center;
 }
 
+.detailsImage {
+    display:none !important;;
+}
+
 
 
 
@@ -336,7 +340,8 @@ element.style {
 .imgContainer{
     width:75vw;
     aspect-ratio: 0.7/0.5;
-    margin: 0 0 15vh 0;
+    margin: 0 0 3vh 0;
+    position: relative;
 }
 
 .eachBanner{
@@ -349,15 +354,39 @@ element.style {
 
 .textContainer{
     width: 90%;
-    margin-top: 10vh;
+    margin-top: 15vh;
 }
 
 .textContainer h3{
     font-size:2rem;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
 }
 .textoChico{
     font-size:1.5rem;
     margin-top: 30px !important;
+}
+.detailsImage{
+    display: flex !important;
+    position: absolute;
+    /* z-index: 1; */
+
+}
+
+.dotsDetail{
+    width: 200px !important;
+    height: 200px!important;
+    bottom:-20px;
+    right: -40px;
+}
+.lineDetail{
+    width: 100px !important;
+    height: 100px!important;
+    top:-50px;
+    left: -30px;
+}
+.burgerImage{
+    z-index: 5;
 }
 
 

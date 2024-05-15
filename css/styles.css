@@ -184,14 +184,19 @@ img {
 #banner h3 {
     font-weight: 800;
     letter-spacing: 10px;
-    margin: 30px 0 10px 0;
+    margin: 0px 0 10px 0;
     text-align: center;
 }
 
 .slides p {
     font-weight: 200;
     text-align: center;
-    margin: 0 10px 30px 0;
+    margin: 0 10px 50px 0;
+}
+
+.textContainer{
+    position: relative;
+    top: -15px;
 }
 
 .slides {
@@ -205,8 +210,7 @@ img {
 
 .imgContainer {
     width: 35vw;
-    /* aspect-ratio: 0.7/0.5; */
-    margin: 23vh 0 0 0;
+    margin: 15vh 0 0 0;
 
 }
 
@@ -264,6 +268,18 @@ element.style {
 .detailsImage {
     display: none !important;
     ;
+}
+
+.slick-dots{
+    bottom: 0 !important;
+    padding: 10px 0 !important;
+
+}
+.slick-dots li.slick-active button:before{
+    color: white !important;
+}
+.slick-dots li button:before {
+    color: gray !important;
 }
 
 
@@ -347,7 +363,7 @@ element.style {
 
     .imgContainer {
         width: 75vw;
-        /* aspect-ratio: 0.7/0.5; */
+    
         margin: 0 0 3vh 0;
         position: relative;
     }

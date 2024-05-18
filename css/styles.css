@@ -37,8 +37,8 @@ header a {
     text-decoration: none;
 }
 
-header {
-    width: 100vw;
+header{
+    width: 100%;
     display: flex;
     justify-content: center;
     position: absolute;

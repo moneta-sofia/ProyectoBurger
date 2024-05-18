@@ -197,6 +197,7 @@ img {
 .textContainer{
     position: relative;
     top: -15px;
+    margin: 0 15vw;
 }
 
 .slides {
@@ -230,7 +231,7 @@ img {
 }
 
 .eachSlider {
-    background-image: url('/img/wallpaperBanner.jpg');
+    background-image: url('/img/banner/wallpaperBanner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -369,16 +370,16 @@ element.style {
     }
 
     .eachBanner {
-        display: flex;
+        display: flex ;
         flex-direction: column-reverse;
         height: 95vh;
         justify-content: space-around;
         align-items: center;
+        align-content: center;
     }
 
     .textContainer {
-        width: 90%;
-        margin-top: 12vh;
+        margin:12vh 10vw 0 10vw !important;
     }
 
     .textContainer h3 {
@@ -458,6 +459,7 @@ element.style {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
     }
     .dotsDetail {
         width: 250px !important;

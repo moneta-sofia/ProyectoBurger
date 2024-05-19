@@ -5,12 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
-            // Oculta todos los bloques de contenido
             blocks.forEach(block => {
                 block.classList.add('hidden');
             });
 
-            // Muestra el bloque de contenido correspondiente al botón clickeado
             blocks[index].classList.remove('hidden');
         });
     });
@@ -23,17 +21,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
-            // Quitar la clase "marked" de todos los botones
             buttons.forEach(btn => btn.classList.remove('marked'));
-            // Agregar la clase "marked" solo al botón clickeado
+           
             button.classList.add('marked');
 
-            // Oculta todos los bloques de contenido
+           
             blocks.forEach(block => {
                 block.classList.add('hidden');
             });
 
-            // Muestra el bloque de contenido correspondiente al botón clickeado
+           
             blocks[index].classList.remove('hidden');
         });
     });

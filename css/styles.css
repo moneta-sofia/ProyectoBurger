@@ -200,24 +200,21 @@ header{
     position: relative;
     padding: 10px;
 }
-.foodtruck{
-    width: 600px;
-    height: 400px;
-    position: absolute;
-    left: 50px;
-    bottom: 10px;
-}
-.conteiner-between{
+.conteiner-footer{
     display: flex;
     justify-content: space-between;
-    width: 55%;
+    width: 60%;
 }
 .conteiner-text-ft{
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; 
-    width: 80%;
+}
+.conteiner-info-text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .textFooter{
     font-weight: bold;
@@ -226,12 +223,7 @@ header{
 .derechos{
     color:var(--color-textbtn);
     opacity: 0.5;
-    margin: 16px;
-}
-.logoFooter{
-    height: 100px;
-    width: 100px;
-    margin: 10px;
+    margin: 20px;
 }
 
 
@@ -308,4 +300,46 @@ header{
 /* ********************************** */
 /*          PIE DE PÁGINA             */
 /* ********************************** */
-  }
+}
+@media (min-width:768px) {
+    .foodtruck{
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        left: 8px;
+        bottom: 48px;
+    }
+    .logoFooter{
+        height: 60px;
+        width: 60px;
+        margin: 10px;
+    }
+}
+@media (min-width:1024px) {
+    .foodtruck{
+        width: 400px;
+        height: 300px;
+        position: absolute;
+        left: 12px;
+        bottom: 28px;
+    }
+    .logoFooter{
+        height: 80px;
+        width: 80px;
+        margin: 10px;
+    }
+}
+@media (min-width:1440px) {
+    .foodtruck{
+        width: 500px;
+        height: 400px;
+        position: absolute;
+        left: 30px;
+        bottom: 16px;
+    }
+    .logoFooter{
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+    }
+}

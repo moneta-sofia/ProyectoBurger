@@ -36,7 +36,7 @@ header a{
 }
 
 header{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     position: absolute;
@@ -185,7 +185,33 @@ header{
 /* ********************************** */
 /*          PIE DE PÁGINA             */
 /* ********************************** */
-
+.edificios{
+    background-color:var(--color-background-oscuro);
+}
+.info-footer{
+    background-color:var(--color-parrafos-oscuro);
+    display: flex;
+    justify-content: flex-end;
+}
+.conteiner-between{
+    display: flex;
+    justify-content: space-between;
+}
+.conteiner-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.derechos{
+    color:var(--color-background-oscuro);
+    opacity: 0.8;
+    margin: 16px;
+}
+.edificios img{
+    width: 100%;
+    height: 350px;
+    margin: 0px;
+}
 
 
 

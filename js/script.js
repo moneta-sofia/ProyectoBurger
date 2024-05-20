@@ -25,6 +25,25 @@ function turnDesplegable() {
 }
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const enlaces = document.querySelectorAll('a');
+
+    for (const enlace of enlaces) {
+        enlace.addEventListener('click', function(event) {
+            event.preventDefault();
+            turnDesplegable()
+            const seccionId = this.getAttribute('href');
+            const seccion = document.querySelector(seccionId);
+            
+            window.scrollTo({
+                top: seccion.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+
 
 /* ********************************** */
 /*            BANNER                  */

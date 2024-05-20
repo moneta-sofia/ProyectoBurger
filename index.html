@@ -20,7 +20,7 @@
     
 </head>
 <body>
-    <!--MENÚ DE NAVEGACIÓN -->
+    MENÚ DE NAVEGACIÓN 
     <header >
 
         <!-- Desktop -->
@@ -48,7 +48,7 @@
 
             <div class="logoMobile">  
                 <img src="./img/LOGO.svg" alt="Logo" id="logoMobile">
-                <!-- <p>PICA Y CORRE</p> -->
+                <!-- <p>PICA Y CORRE</p> 
             </div>
         </nav>
 
@@ -116,7 +116,61 @@
 
         <!-- FORMULARIO -->
         <section>
-                
+               <!-- Desktop --> 
+                <div class="olita">
+                    <img src="img/img.png" alt="Imagen" class="Img-olita">
+                </div> 
+                <div class="contenedor-formulario">
+                    <!-- Imagen-->
+                    <div class="contenedor-formulario__imagen">
+                        <img src="img/Screenshot_2024-04-24_011952-transformed.png" alt="Imagen" class="formulario-imagen__principal">
+                        <img src="img/Lovepik_com-380457113-bottom-gradient-black-shadow-superimposed-picture-decoration-screen-border.png" class="formulario-imagen__sombra">
+                        <img src="img/Lovepik_com-380457113-bottom-gradient-black-shadow-superimposed-picture-decoration-screen-border.png" class="formulario-imagen__sombra rotacion-90grados">
+                    </div>
+                    <!-- datos-->                    
+                    <div class="contenedor-formulario__inputs">
+                        <h2 class="contenedor-formulario__titulo">Trabaja con nosotros</h2>
+                        <form>
+                            <label class="label-formulario" for="nombre" >Nombre</label>
+                            <input class="input-formulario" type="text" id="nombre" placeholder="Escriba su nombre aquí...">
+                            <label class="label-formulario" for="genero">Género</label>
+                            <div class="contenedor-formulario__generos input-formulario">
+                                <input class="oculto opcion-genero" type="radio" id="masculino" name="genero" value="masculino">
+                                <label class="texto-genero" for="masculino">Masculino</label>
+                                <input class="oculto opcion-genero" type="radio" id="femenino" name="genero" value="femenino">
+                                <label class="texto-genero" for="femenino">Femenino</label>
+                                <input class="oculto opcion-genero" type="radio" id="otro" name="genero" value="otro">
+                                <label class="texto-genero" for="otro">Otro</label>
+                            </div>
+                            <label class="label-formulario" for="correo">Correo</label>
+                            <input class="input-formulario" type="text" id="correo" placeholder="example@gmail.com">
+                            <label class="label-formulario" for="telefono">Teléfono</label>
+                            <input class="input-formulario" type="text" id="telefono" placeholder="+00 000 000000">
+                            <label class="label-formulario" for="puesto">Puesto a elegir</label>
+                            <select class="input-formulario select-formulario" id="puesto" name="puesto">
+                                <option value="" disabled selected>Seleccione el puesto...</option>
+                                <option value="atencion al cliente">Atencion al cliente</option>
+                                <option value="atencion-autoservicio">Atencion-autoservicio</option>
+                                <option value="cajero">Cajero</option>
+                                <option value="cocinero">Cocinero</option>
+                                <option value="delivery">Delivery</option>
+                                <option value="gerente">Gerente</option>
+                                <option value="limpieza">Limpieza</option>
+                                <option value="marketing">Marketing</option>
+                            </select>
+                            <label for="curriculum" class="input-formulario curriculum-formulario__label">
+                                <span class="formulario__logo__subirArchivo">
+                                    <svg width="19" height="20" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.8326 7.06491L12.874 5.11491V22.4999C12.874 22.8977 13.0407 23.2793 13.3375 23.5606C13.6342 23.8419 14.0367 23.9999 14.4564 23.9999C14.8761 23.9999 15.2786 23.8419 15.5754 23.5606C15.8722 23.2793 16.0389 22.8977 16.0389 22.4999V5.11491L18.0803 7.06491C18.2274 7.2055 18.4024 7.31709 18.5953 7.39325C18.7881 7.4694 18.9949 7.50861 19.2039 7.50861C19.4128 7.50861 19.6196 7.4694 19.8124 7.39325C20.0053 7.31709 20.1803 7.2055 20.3274 7.06491C20.4757 6.92546 20.5935 6.75956 20.6738 6.57677C20.7541 6.39398 20.7955 6.19793 20.7955 5.99991C20.7955 5.80189 20.7541 5.60583 20.6738 5.42304C20.5935 5.24025 20.4757 5.07435 20.3274 4.93491L15.58 0.434908C15.4329 0.294316 15.2579 0.182724 15.065 0.106571C14.8722 0.0304183 14.6653 -0.00878906 14.4564 -0.00878906C14.2475 -0.00878906 14.0407 0.0304183 13.8479 0.106571C13.655 0.182724 13.48 0.294316 13.3329 0.434908L8.58547 4.93491C8.28748 5.21736 8.12007 5.60046 8.12007 5.99991C8.12007 6.39936 8.28748 6.78245 8.58547 7.06491C8.88345 7.34736 9.28761 7.50605 9.70902 7.50605C10.1304 7.50605 10.5346 7.34736 10.8326 7.06491ZM23.9513 10.4999H20.7863C20.3666 10.4999 19.9641 10.6579 19.6673 10.9392C19.3706 11.2206 19.2039 11.6021 19.2039 11.9999C19.2039 12.3977 19.3706 12.7793 19.6673 13.0606C19.9641 13.3419 20.3666 13.4999 20.7863 13.4999H23.9513C24.371 13.4999 24.7735 13.6579 25.0702 13.9392C25.367 14.2206 25.5337 14.6021 25.5337 14.9999V25.4999C25.5337 25.8977 25.367 26.2793 25.0702 26.5606C24.7735 26.8419 24.371 26.9999 23.9513 26.9999H4.9616C4.54191 26.9999 4.1394 26.8419 3.84263 26.5606C3.54586 26.2793 3.37913 25.8977 3.37913 25.4999V14.9999C3.37913 14.6021 3.54586 14.2206 3.84263 13.9392C4.1394 13.6579 4.54191 13.4999 4.9616 13.4999H8.12655C8.54625 13.4999 8.94875 13.3419 9.24553 13.0606C9.5423 12.7793 9.70902 12.3977 9.70902 11.9999C9.70902 11.6021 9.5423 11.2206 9.24553 10.9392C8.94875 10.6579 8.54625 10.4999 8.12655 10.4999H4.9616C3.70251 10.4999 2.49499 10.974 1.60467 11.8179C0.714361 12.6618 0.214188 13.8064 0.214188 14.9999V25.4999C0.214188 26.6934 0.714361 27.838 1.60467 28.6819C2.49499 29.5258 3.70251 29.9999 4.9616 29.9999H23.9513C25.2104 29.9999 26.4179 29.5258 27.3082 28.6819C28.1985 27.838 28.6987 26.6934 28.6987 25.4999V14.9999C28.6987 13.8064 28.1985 12.6618 27.3082 11.8179C26.4179 10.974 25.2104 10.4999 23.9513 10.4999Z" fill="black"/>
+                                    </svg>
+                                </span>
+                                <span class="color-letra-formulario">Sube tu curriculum</span>
+                            </label>
+                            <input id="curriculum" type="file" class="curriculum-formulario__input" multiple>
+                            <button class="boton-formulario" type="submit">ENVIAR</button>    
+                        </form>
+                    </div>
+                </div>
         </section>
 
     </main>

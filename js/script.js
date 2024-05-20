@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 /* ********************************** */
@@ -45,29 +44,6 @@ $(document).ready(function () {
 /*       SECCIÓN ABOUT US             */
 /* ********************************** */
 
-
-
-/* ********************************** */
-/*       SECCIÓN DE PRODUCTOS         */
-/* ********************************** */
-
-
-
-/* ********************************** */
-/*            FORMULARIO              */
-/* ********************************** */
-
-
-
-
-/* ********************************** */
-/*          PIE DE PÁGINA             */
-/* ********************************** */
-
-
-
-=======
-// SECCIÓN PRODUCTOS
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll('.header-productos button');
     const blocks = document.querySelectorAll('.contenido-productos .content_text');
@@ -105,4 +81,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
->>>>>>> productos-judith
+
+
+/* ********************************** */
+/*       SECCIÓN DE PRODUCTOS         */
+/* ********************************** */
+
+
+
+/* ********************************** */
+/*            FORMULARIO              */
+/* ********************************** */
+
+
+
+
+/* ********************************** */
+/*          PIE DE PÁGINA             */
+/* ********************************** */

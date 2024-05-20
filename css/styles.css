@@ -62,7 +62,6 @@ header{
     width: 50px;
     height: 50px;
     margin: 10px;
-
 }
 
 .logoContainer {
@@ -105,7 +104,7 @@ header{
 }
 
 #opcionesMobile svg,
-img {
+#opcionesMobile img {
     padding: 0 5px;
     height: 25px;
     width: 25px;
@@ -290,7 +289,56 @@ element.style {
 /*       SECCIÓN ABOUT US             */
 /* ********************************** */
 
+#about{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background-oscuro);
+    padding-top: 5vh;
+    padding-bottom: 10vh;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+#JuanContainer{
+    width: 43vw;
+}
+
+#JuanContainer img {
+    width:100%;
+}
+
+#textContainerAbout{
+    color: var(--color-titulos-oscuro) ;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    width: 43vw;
+    font-weight: 200;
+    line-height: 1.5;
+}
+#textContainerAbout h3{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    margin: 10px 0;
+    font-weight: bold;
+}
+#textContainerAbout b{
+    font-weight:600;
+}
+.textdDifColor{
+    color: var(--color-btn);
+}
+
+.wave{
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+}
+
+.test{
+    height: 100vh;
+    width:100%;
+    z-index: 1;
+}
 
 /* ********************************** */
 /*       SECCIÓN DE PRODUCTOS         */
@@ -424,6 +472,41 @@ element.style {
     /*       SECCIÓN ABOUT US             */
     /* ********************************** */
 
+    #about{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        padding-top: 3vh;
+        height: 80vh;
+    }
+    #textContainerAbout{
+        width: 90vw;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    #JuanContainer{
+        width: 80vw;
+    }
+    
+    #JuanContainer img {
+        width:100%;
+    }
+
+    #textContainerAbout{
+        font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+
+    #textContainerAbout h3{
+        font-size: clamp(2.5rem, 3vw, 3.5rem);
+    }
+    
+    .wave{
+        position: absolute;
+        bottom: -10px;
+        width: 100vw;
+    }
 
 
     /* ********************************** */
@@ -474,6 +557,21 @@ element.style {
         top: -5px;
         left: -70px;
     }
+
+    /* -------------------------------------------------------------------------- */
+    /*                                    ABOUT                                   */
+    /* -------------------------------------------------------------------------- */
+
+    #about{
+        height: 90vh;
+    }
+    /* #textContainerAbout{
+        font-size: clamp(2rem, 2vw, 2rem);
+    }
+
+    #textContainerAbout h3{
+        font-size: clamp(3rem, 3vw, 3rem);
+    } */
 
 }
 

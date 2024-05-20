@@ -303,10 +303,14 @@ element.style {
 }
 #JuanContainer{
     width: 43vw;
+    position: relative;
+    bottom: -40px;
+    z-index: 0;
 }
 
 #JuanContainer img {
     width:100%;
+    z-index: 0;
 }
 
 #textContainerAbout{
@@ -332,6 +336,7 @@ element.style {
     position: absolute;
     bottom: -100px;
     width: 100%;
+    z-index: 1;
 }
 
 .test{
@@ -345,6 +350,11 @@ element.style {
 /* ********************************** */
 .container-principal-productos{
     margin-bottom:220px; 
+
+    position: relative;
+    z-index: 2;
+    background-color: white;
+
 
     display: flex;
     flex-direction: column;
@@ -825,7 +835,7 @@ span.precio-producto{
         justify-content: space-between;
         padding: 0;
         padding-top: 3vh;
-        height: 80vh;
+        height: auto;
     }
     #textContainerAbout{
         width: 90vw;
@@ -905,20 +915,6 @@ span.precio-producto{
         left: -70px;
     }
 
-    /* -------------------------------------------------------------------------- */
-    /*                                    ABOUT                                   */
-    /* -------------------------------------------------------------------------- */
-
-    #about{
-        height: 90vh;
-    }
-    /* #textContainerAbout{
-        font-size: clamp(2rem, 2vw, 2rem);
-    }
-
-    #textContainerAbout h3{
-        font-size: clamp(3rem, 3vw, 3rem);
-    } */
 
 }
 

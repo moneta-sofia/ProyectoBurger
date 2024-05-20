@@ -296,7 +296,7 @@ element.style {
 /* ********************************** */
 .container-principal-productos{
     margin-bottom:220px; 
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -661,6 +661,8 @@ span.precio-producto{
 
 
 
+
+/* Media queries agregadas por sofi */
 
 @media (max-width: 1024px) {
 

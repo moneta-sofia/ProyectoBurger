@@ -25,16 +25,16 @@ function turnDesplegable(estado) {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const enlaces = document.querySelectorAll('a');
 
     for (const enlace of enlaces) {
-        enlace.addEventListener('click', function(event) {
+        enlace.addEventListener('click', function (event) {
             event.preventDefault();
             turnDesplegable(false)
             const seccionId = this.getAttribute('href');
             const seccion = document.querySelector(seccionId);
-            
+
             window.scrollTo({
                 top: seccion.offsetTop,
                 behavior: 'smooth'
@@ -45,32 +45,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     var sectionIds = $('a.nav-link');
-  
-      $(document).scroll(function(){
-          sectionIds.each(function(){
-  
-              var container = $(this).attr('href');
-              var containerOffset = $(container).offset().top;
-              var containerHeight = $(container).outerHeight();
-              var containerBottom = containerOffset + containerHeight;
-              var scrollPosition = $(document).scrollTop();
-      
-              if(scrollPosition < containerBottom - 20 && scrollPosition >= containerOffset - 20){
-                  $(this).addClass('active');
-              } else{
-                  $(this).removeClass('active');
-              }
-      
-      
-          });
-      });
-     
-  
-  
-  });
+
+    $(document).scroll(function () {
+        sectionIds.each(function () {
+
+            var container = $(this).attr('href');
+            var containerOffset = $(container).offset().top;
+            var containerHeight = $(container).outerHeight();
+            var containerBottom = containerOffset + containerHeight;
+            var scrollPosition = $(document).scrollTop();
+
+            if (scrollPosition < containerBottom - 20 && scrollPosition >= containerOffset - 20) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+
+
+        });
+    });
+
+
+
+});
 
 
 /* ********************************** */
@@ -91,7 +91,7 @@ $(document).ready(function () {
 /*       SECCIÓN ABOUT US             */
 /* ********************************** */
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll('.header-productos button');
     const blocks = document.querySelectorAll('.contenido-productos .content_text');
 
@@ -107,22 +107,22 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Funciones de los botones del navegador
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll('.header-productos button');
     const blocks = document.querySelectorAll('.contenido-productos .content_text');
 
     buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
             buttons.forEach(btn => btn.classList.remove('marked'));
-           
+
             button.classList.add('marked');
 
-           
+
             blocks.forEach(block => {
                 block.classList.add('hidden');
             });
 
-           
+
             blocks[index].classList.remove('hidden');
         });
     });
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
 /* ********************************** */
 
 // SECCIÓN PRODUCTOS
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll('.header-productos button');
     const blocks = document.querySelectorAll('.contenido-productos .content_text');
 
@@ -151,22 +151,22 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Funciones de los botones del navegador
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll('.header-productos button');
     const blocks = document.querySelectorAll('.contenido-productos .content_text');
 
     buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
             buttons.forEach(btn => btn.classList.remove('marked'));
-           
+
             button.classList.add('marked');
 
-           
+
             blocks.forEach(block => {
                 block.classList.add('hidden');
             });
 
-           
+
             blocks[index].classList.remove('hidden');
         });
     });

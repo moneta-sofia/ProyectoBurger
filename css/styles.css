@@ -36,6 +36,14 @@ header a {
     color: var(--color-titulos);
     text-decoration: none;
 }
+
+header a.active{
+    font-weight: bolder;
+  }
+  
+
+
+
 header a:active{
     font-weight: bold;
 }

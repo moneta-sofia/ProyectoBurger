@@ -53,7 +53,7 @@
 
         <!-- Mobile -->
         <nav class="navbarMobile">
-            <button class="menuButton" onclick=turnDesplegable()>
+            <button class="menuButton" onclick=turnDesplegable(true)>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" id="menuLogo">
                     <path
                         d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
@@ -61,16 +61,16 @@
                 </svg>
             </button>
 
-            <div class="logoMobile">
+            <a class="logoMobile" href="#banner">
                 <img src="./img/LOGO.svg" alt="Logo" id="logoMobile">
                 <!-- <p>PICA Y CORRE</p> -->
-            </div>
+            </a>
         </nav>
 
         <!-- Desplegable Navbar Mobile -->
         <div id="fondoOscuro" class="navbarCerrado"></div>
         <div id="opcionesMobile" class="navbarCerrado">
-            <button id="close" onclick=turnDesplegable()>
+            <button id="close" onclick=turnDesplegable(false)>
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0 0 24 24">
                     <path
                         d="M 4.9902344 3.9902344 A 1.0001 1.0001 0 0 0 4.2929688 5.7070312 L 10.585938 12 L 4.2929688 18.292969 A 1.0001 1.0001 0 1 0 5.7070312 19.707031 L 12 13.414062 L 18.292969 19.707031 A 1.0001 1.0001 0 1 0 19.707031 18.292969 L 13.414062 12 L 19.707031 5.7070312 A 1.0001 1.0001 0 0 0 18.980469 3.9902344 A 1.0001 1.0001 0 0 0 18.292969 4.2929688 L 12 10.585938 L 5.7070312 4.2929688 A 1.0001 1.0001 0 0 0 4.9902344 3.9902344 z">
@@ -726,6 +726,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollspy/1.0.0/jquery-scrollspy.min.js"></script> -->
 <script type="text/javascript" src="/node_modules/slick-carousel/slick/slick.min.js"></script>
 <script src="js/script.js"></script>
 

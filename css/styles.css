@@ -36,6 +36,9 @@ header a {
     color: var(--color-titulos);
     text-decoration: none;
 }
+header a:active{
+    font-weight: bold;
+}
 
 header{
     width: 100%;
@@ -98,10 +101,16 @@ header{
     flex-direction: column;
     background-color: #FFBE33;
     width: 85vw;
-    height: 100vh;
+    height: 120vh;
     z-index: 100;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-110%);
 }
+#opcionesMobile.navbarAbierto {
+    transform: translateX(0);
+}
+
 
 #opcionesMobile svg,
 #opcionesMobile img {
@@ -115,10 +124,20 @@ header{
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 99;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
     /* Z-index inferior al de #opcionesMobile */
+}
+
+#fondoOscuro.navbarAbierto {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .item {
@@ -153,13 +172,6 @@ header{
     border: none;
 }
 
-.navbarAbierto {
-    display: flex !important;
-}
-
-.navbarCerrado {
-    display: none !important;
-}
 
 
 /* ********************************** */
@@ -730,6 +742,9 @@ span.precio-producto{
     /* ********************************** */
 
     #logoMobile {
+        background-color: white;
+        border-radius: 100px;
+        padding: 2px;
         width: 55px;
         height: 55px;
         margin: 10px;
@@ -743,6 +758,7 @@ span.precio-producto{
         display: flex;
         justify-content: space-between;
         width: 100vw;
+        position: fixed;
     }
 
     .menuButton {

@@ -6,8 +6,8 @@
 let opcionesMobile = document.getElementById("opcionesMobile");
 let fondoOscuro = document.getElementById("fondoOscuro");
 
-function turnDesplegable() {
-    if (opcionesMobile.classList.contains("navbarCerrado")) {
+function turnDesplegable(estado) {
+    if (estado) {
 
         opcionesMobile.classList.remove("navbarCerrado");
         opcionesMobile.classList.add("navbarAbierto");
@@ -15,7 +15,7 @@ function turnDesplegable() {
         fondoOscuro.classList.remove("navbarCerrado");
         fondoOscuro.classList.add("navbarAbierto");
 
-    } else if (opcionesMobile.classList.contains("navbarAbierto")) {
+    } else if (!estado) {
         opcionesMobile.classList.remove("navbarAbierto");
         opcionesMobile.classList.add("navbarCerrado");
 
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (const enlace of enlaces) {
         enlace.addEventListener('click', function(event) {
             event.preventDefault();
-            turnDesplegable()
+            turnDesplegable(false)
             const seccionId = this.getAttribute('href');
             const seccion = document.querySelector(seccionId);
             

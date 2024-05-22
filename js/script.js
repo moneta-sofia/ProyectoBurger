@@ -177,7 +177,15 @@ document.addEventListener("DOMContentLoaded", function () {
 /*            FORMULARIO              */
 /* ********************************** */
 
-
+document.getElementById('curriculum').addEventListener('change', function(e) {
+    const fileList = e.target.files;
+    const fileInputText = document.querySelector('.color-letra-formulario');
+  
+    if (fileList.length > 0) {
+      fileInputText.textContent = fileList.length === 1 ? fileList[0].name : `${fileList.length}`;
+    }
+  });
+  
 
 
 /* ********************************** */

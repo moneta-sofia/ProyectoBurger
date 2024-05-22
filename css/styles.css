@@ -301,6 +301,43 @@ header{
 /*          PIE DE PÁGINA             */
 /* ********************************** */
 }
+@media (max-width:767px) {
+    .info-footer{
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+    .foodtruck{
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        top: -140px;
+    }
+    .conteiner-footer{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .conteiner-info-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .textFooter{
+        margin: 8px;
+    }
+    .logoFooter{
+        height: 80px;
+        width: 80px;
+        margin: 5px;
+    }
+}
 @media (min-width:768px) {
     .foodtruck{
         width: 300px;

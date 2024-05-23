@@ -190,7 +190,7 @@ document.getElementById('curriculum').addEventListener('change', function(e) {
     }
   });
   
-  document.getElementById('boton-formulario').addEventListener('click', function(event) {
+  document.getElementById('boton-formulario').addEventListener('click' , () => {
     let generoRadios = document.getElementsByName('genero');
     let generoEscogido = false;
     let nombreRequerido = document.getElementById('nombre');
@@ -244,7 +244,7 @@ document.getElementById('curriculum').addEventListener('change', function(e) {
 });
 
 function validarNombre(nombre){
-    if (nombre.validity.patternMismatch) {
+    if (nombre.value.length == 0) {
       nombre.setCustomValidity('Por favor, ingrese su nombre.');
     } 
     else{

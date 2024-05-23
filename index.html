@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- estilos Un CSS Reset es un conjunto de reglas CSS que se utiliza para reiniciar los estilos predeterminados de los navegadores -->
-    <link rel="stylesheet" href="./css/reset.css">   
+    <!-- estilos Un CSS Reset es un conjunto de reglas CSS que se utiliza para reiniciar los estilos predeterminados de los navegadores -->
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
-     <!-- fuente1 -->
+    <!-- fuente1 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-     <!-- fuente2 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- fuente2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- logo y título de la pestaña del navegador -->
     <link rel="shortcut icon" href="./img/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick-theme.css" />
+
     <title>Pica y Corre</title>
-    
+
+
 </head>
+
 <body>
-    <!-- MENÚ DE NAVEGACIÓN 
+    <!-- MENÚ DE NAVEGACIÓN -->
     <header >
 
-        <!-- Desktop 
+        <!-- Desktop -->
         <nav class="navbarDesktop">
-            <a href="" class="logoContainer">
+            <a href="#banner" class="logoContainer">
                 <img src="./img/LOGO.svg" alt="Logo" id="logoDesktop">
                 <p>PICA Y CORRE</p>
             </a>
 
             <div class="opcionesContainer">
-                <a href="" class="opciones">Inicio</a>
-                <a href="" class="opciones">Sobre Nosotros</a>
-                <a href="" class="opciones">Productos</a>
-                <a href="" class="opciones">Contáctanos</a>
+                <a href="#banner" class="opciones nav-link">Inicio</a>
+                <a href="#about" class="opciones nav-link">Sobre Nosotros</a>
+                <a href="#products" class="opciones nav-link">Productos</a>
+                <a href="#contact" class="opciones nav-link">Contáctanos</a>
             </div>
         </nav>
 
-        <!-- Mobile 
+        <!-- Mobile -->
         <nav class="navbarMobile">
-            <button class="menuButton"  onclick=turnDesplegable()>
-                <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="30" viewBox="0 0 50 50" id="menuLogo" >
-                    <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"></path>
+            <button class="menuButton" onclick=turnDesplegable(true)>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" id="menuLogo">
+                    <path
+                        d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
+                    </path>
                 </svg>
             </button>
 
-            <div class="logoMobile">  
+            <a class="logoMobile" href="#banner">
                 <img src="./img/LOGO.svg" alt="Logo" id="logoMobile">
                 <!-- <p>PICA Y CORRE</p> 
             </div>
         </nav>
 
-        <!-- Desplegable Navbar Mobile 
+        <!-- Desplegable Navbar Mobile -->
         <div id="fondoOscuro" class="navbarCerrado"></div>
         <div id="opcionesMobile" class="navbarCerrado">
-            <button id="close" onclick=turnDesplegable()>
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0 0 24 24" >
-                    <path d="M 4.9902344 3.9902344 A 1.0001 1.0001 0 0 0 4.2929688 5.7070312 L 10.585938 12 L 4.2929688 18.292969 A 1.0001 1.0001 0 1 0 5.7070312 19.707031 L 12 13.414062 L 18.292969 19.707031 A 1.0001 1.0001 0 1 0 19.707031 18.292969 L 13.414062 12 L 19.707031 5.7070312 A 1.0001 1.0001 0 0 0 18.980469 3.9902344 A 1.0001 1.0001 0 0 0 18.292969 4.2929688 L 12 10.585938 L 5.7070312 4.2929688 A 1.0001 1.0001 0 0 0 4.9902344 3.9902344 z"></path>
+            <button id="close" onclick=turnDesplegable(false)>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0 0 24 24">
+                    <path
+                        d="M 4.9902344 3.9902344 A 1.0001 1.0001 0 0 0 4.2929688 5.7070312 L 10.585938 12 L 4.2929688 18.292969 A 1.0001 1.0001 0 1 0 5.7070312 19.707031 L 12 13.414062 L 18.292969 19.707031 A 1.0001 1.0001 0 1 0 19.707031 18.292969 L 13.414062 12 L 19.707031 5.7070312 A 1.0001 1.0001 0 0 0 18.980469 3.9902344 A 1.0001 1.0001 0 0 0 18.292969 4.2929688 L 12 10.585938 L 5.7070312 4.2929688 A 1.0001 1.0001 0 0 0 4.9902344 3.9902344 z">
+                    </path>
                 </svg>
             </button>
 
@@ -69,26 +84,32 @@
 
             <button class="item">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
-                    <path d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z"></path>
+                    <path
+                        d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z">
+                    </path>
                 </svg>
-                <div href="" class="opciones">Inicio</div>
+                <a href="#banner" class="opciones">Inicio</a>
             </button>
 
             <button class="item">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 32 32">
-                    <path d="M 16 3 C 8.8321388 3 3 8.832144 3 16 C 3 23.167856 8.8321388 29 16 29 C 23.167861 29 29 23.167856 29 16 C 29 8.832144 23.167861 3 16 3 z M 16 5 C 22.086982 5 27 9.9130223 27 16 C 27 22.086978 22.086982 27 16 27 C 9.9130183 27 5 22.086978 5 16 C 5 9.9130223 9.9130183 5 16 5 z M 16 9 A 1 1 0 0 0 16 11 A 1 1 0 0 0 16 9 z M 15.984375 12.986328 A 1.0001 1.0001 0 0 0 15 14 L 15 22 A 1.0001 1.0001 0 1 0 17 22 L 17 14 A 1.0001 1.0001 0 0 0 15.984375 12.986328 z"></path>
+                    <path
+                        d="M 16 3 C 8.8321388 3 3 8.832144 3 16 C 3 23.167856 8.8321388 29 16 29 C 23.167861 29 29 23.167856 29 16 C 29 8.832144 23.167861 3 16 3 z M 16 5 C 22.086982 5 27 9.9130223 27 16 C 27 22.086978 22.086982 27 16 27 C 9.9130183 27 5 22.086978 5 16 C 5 9.9130223 9.9130183 5 16 5 z M 16 9 A 1 1 0 0 0 16 11 A 1 1 0 0 0 16 9 z M 15.984375 12.986328 A 1.0001 1.0001 0 0 0 15 14 L 15 22 A 1.0001 1.0001 0 1 0 17 22 L 17 14 A 1.0001 1.0001 0 0 0 15.984375 12.986328 z">
+                    </path>
                 </svg>
-                <div href="" class="opciones">Sobre Nosotros</div>
+                <a href="#about" class="opciones">Sobre Nosotros</a>
             </button>
 
             <button class="item">
-                <img src="data:image/png;base64,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">
-                <div href="" class="opciones">Productos</div>
+                <img
+                    src="data:image/png;base64,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">
+                <a href="#products" class="opciones">Productos</a>
             </button>
 
             <button class="item">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADCklEQVR4nO2Zy29NURSHP7T1KAlK4jXy+gMoOmBAQlASERETjwEDaaJmjYaYlMYIKTERvZp0RBOphBkRA2aUjqoGQq4WbSQqVZPKTtaVlZVze88+9j1Hk/sle3Jz1mOfs/dav70vVKhQIQQzgQagFegB+oFR4LeMUfntPnAO2CI2mbMKaAc+AZOe4yNwGViZReJ1wC1gIkHidvwCbgKL00r+CPAtIpE8cBs4CmyQSVbLWAJsBI7JM/kI+6/A4XImXiVv3QZ+AuwFZnn4cs82Ak8j/N2QWEGZCzw0gQaAnQF87wbeGd+9EjMIVRHJdwLzQgUAaoGuiEkE+RJ22ZynfFwwsTpCbNi0ki82iUMkpM5Umxzp0aXifgEW/evSGZB1mha1ZmN3JOmwukntIn32mGa3wse4XRm7Wp0Vz1Qel3yajNY2ruFkxT6Vx4e4ArDByIPgXdGDKmBI5bM5jlGrMnC6pRhOSY4HEHPjJZZHp3q2Jc4EepSBE2ZRzAB+BEh+UobzVYzj6rl7cSbQrwycqixGW8Av0DZFnHr17Js4ExhRBq6ZZc1SI7lLout/Ddkz2/SDkuhlMYdpOIHPymAZ03AJ9SkDdwwMXUZLlU3LJt9NrJXgyTKV0anKpuWEbxltVgZ3ylBGS5VNS863ka1XBiNyq5CllBhW+bieEIu3yugA2bE/iZhznFWGL8mO5yoPn2XHAuC7MnZ3mWnTaPaN14HGMagcbCNd5gPvVfzrvg7WmpKXtqToVvGHkxzqm8wFU5pcNGX3YBInvcqBm0xWyV9L4qTGdNk1pLPmu03yDzwvjP+yXTlxdzNRuOa2NVB1ajQbtpB84svdK+aqu8Bq4LQ411/ohTS7as8O65qUrvO64iR68wVeKWdX5VZsIIbGGZED+ClRscvlPFEjf3DUizDLGXkwKWMo6Ya1/IwpygZNs0s6xuWtLyQQj4sEGpPq1CR9otCxm412ijuctmmTLxUU5/CRJPxa9sSOGM1sHXAGuCt2eXm7E7K8+kTPt8gh5b/4m7VCBaY5fwDlENrwg3MbPQAAAABJRU5ErkJggg==">                
-                <div href="" class="opciones">Contáctanos</div>
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADCklEQVR4nO2Zy29NURSHP7T1KAlK4jXy+gMoOmBAQlASERETjwEDaaJmjYaYlMYIKTERvZp0RBOphBkRA2aUjqoGQq4WbSQqVZPKTtaVlZVze88+9j1Hk/sle3Jz1mOfs/dav70vVKhQIQQzgQagFegB+oFR4LeMUfntPnAO2CI2mbMKaAc+AZOe4yNwGViZReJ1wC1gIkHidvwCbgKL00r+CPAtIpE8cBs4CmyQSVbLWAJsBI7JM/kI+6/A4XImXiVv3QZ+AuwFZnn4cs82Ak8j/N2QWEGZCzw0gQaAnQF87wbeGd+9EjMIVRHJdwLzQgUAaoGuiEkE+RJ22ZynfFwwsTpCbNi0ki82iUMkpM5Umxzp0aXifgEW/evSGZB1mha1ZmN3JOmwukntIn32mGa3wse4XRm7Wp0Vz1Qel3yajNY2ruFkxT6Vx4e4ArDByIPgXdGDKmBI5bM5jlGrMnC6pRhOSY4HEHPjJZZHp3q2Jc4EepSBE2ZRzAB+BEh+UobzVYzj6rl7cSbQrwycqixGW8Av0DZFnHr17Js4ExhRBq6ZZc1SI7lLout/Ddkz2/SDkuhlMYdpOIHPymAZ03AJ9SkDdwwMXUZLlU3LJt9NrJXgyTKV0anKpuWEbxltVgZ3ylBGS5VNS863ka1XBiNyq5CllBhW+bieEIu3yugA2bE/iZhznFWGL8mO5yoPn2XHAuC7MnZ3mWnTaPaN14HGMagcbCNd5gPvVfzrvg7WmpKXtqToVvGHkxzqm8wFU5pcNGX3YBInvcqBm0xWyV9L4qTGdNk1pLPmu03yDzwvjP+yXTlxdzNRuOa2NVB1ajQbtpB84svdK+aqu8Bq4LQ411/ohTS7as8O65qUrvO64iR68wVeKWdX5VZsIIbGGZED+ClRscvlPFEjf3DUizDLGXkwKWMo6Ya1/IwpygZNs0s6xuWtLyQQj4sEGpPq1CR9otCxm412ijuctmmTLxUU5/CRJPxa9sSOGM1sHXAGuCt2eXm7E7K8+kTPt8gh5b/4m7VCBaY5fwDlENrwg3MbPQAAAABJRU5ErkJggg==">
+                <a href="#contact" class="opciones">Contáctanos</a>
             </button>
 
 
@@ -96,26 +117,598 @@
         </div>
 
 
-    </header> -->
+    </header>
 
     <main>
         <!-- BANNER -->
-        <section>
+
+        <section id="banner">
+            <div class="slides" id="asddas">
+                <div id="slide-1" class="eachSlider">
+                    <div class="eachBanner">
+                        <div class="imgbanner">
+                            <div class="imgContainer">
+                                <img src="./img/Banner/detalleBurger.png" alt="detalleBurger" class="detailsImage lineDetail">
+                                <img src="./img/Banner/otroDetalleBurger.png" alt="detalleBurger"class="detailsImage dotsDetail" >
+                                <img src="img\Banner/hamburguesa.webp" class="burgerImage" alt="Hamburguesa">
+                            </div>
+                        </div>
+                        <div class="textContainer">
+                            <h3>CRISPY BBQ</h3>
+                            <p  class="textoChico">Contiene bacon doble, es una hamburguesa con doble carne, 2 quesos mozzarella, bacon, cebolla crispy, salsa BBQ</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="slide-2" class="eachSlider">
+                    <div class="eachBanner">    
+                        <div class="imgbanner">
+                            <div class="imgContainer">
+                                <img src="./img/Banner/detalleBurger.png" alt="detalleBurger" class="detailsImage lineDetail">
+                                <img src="./img/Banner/otroDetalleBurger.png" alt="detalleBurger"class="detailsImage dotsDetail" >
+                                <img src="img/Banner/pizza.webp" class="burgerImage" alt="Pizza">
+                            </div>
+                        </div>
+                        <div class="textContainer">
+                            <h3>LA MECHADA</h3>
+                            <p class="textoChico">Contiene carne mechada, tomate, mezcla de orégano y parmesano y salsa de tomate</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="slide-3" class="eachSlider">
+                    <div class="eachBanner">
+                        <div class="imgbanner">
+                            <div class="imgContainer">
+                                <img src="./img/Banner/detalleBurger.png" alt="detalleBurger" class="detailsImage lineDetail">
+                                <img src="./img/Banner/otroDetalleBurger.png" alt="detalleBurger"class="detailsImage dotsDetail" >
+                                <img src="img/Banner/hotdog.webp" class="burgerImage" alt="Hotdog">
+                            </div>
+                        </div>
+                        
+                        <div class="textContainer">
+                            <h3>EL PICANTE</h3>
+                            <p class="textoChico">Contiene pan, queso, oregano, tomate , mucho ají, mayonesa casera</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="slide-4" class="eachSlider">
+                    <div class="eachBanner">
+                        <div class="imgbanner">
+                            <div class="imgContainer">
+                                <img src="./img/Banner/detalleBurger.png" alt="detalleBurger" class="detailsImage lineDetail">
+                                <img src="./img/Banner/otroDetalleBurger.png" alt="detalleBurger"class="detailsImage dotsDetail" >
+                                <img src="img/Banner/empanadas.webp" class="burgerImage" alt="Empanadas">
+                            </div>
+                        </div>
+                        
+                        <div class="textContainer">
+                            <h3>QUESO TURBO</h3>
+                            <p class="textoChico">Contiene queso mozzarella, masa de trigo, cebolla picada, orégano y sal</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
 
         </section>
 
         <!-- ABOUT US -->
-        <section>
+        <section id="about">
+            <div id="textContainerAbout">
+                <h3>Sabor en <span class="textdDifColor">Movimiento!</span></h3>
+                <p>¡Descubre el sabor sobre ruedas con Pica y Corre! Desde <b>hamburguesas suculentas </b> <b>hasta tacos llenos de sabor</b>, llevamos la comida rápida a otro nivel. <b>¿Listo para una experiencia única? </b>
+                    ¡Corre hacia nosotros y déjate sorprender!</p>
+            </div>
+            <div id="JuanContainer">
+                <img src="/img/About/Juan.png" alt="Juan">
+            </div>
+            <img src="/img/About/wave.svg" alt="" class="wave">
             
         </section>
 
-        <!-- PRODUCTS -->
-        <section>
+        <!-- PRODUCTOS -->
+        <section id="products">
+            <div class="container-principal-productos">
+                <div class="titulo-productos">
+                    <h2 class="titulo-productos">Productos</h2>
+                </div>
+                <div class="container-productos" id="container-productos">
+                    <div class="header-productos">
+                        <button class="btn marked" data-number="1" data-emoji="🍔">Burger</button>
+                        <button class="btn" data-number="2" data-emoji="🍕">Pizza</button>
+                        <button class="btn" data-number="3" data-emoji="🌭">Panchito</button>
+                        <button class="btn" data-number="4" data-emoji="🥖">Snacks</button>
+                    </div>
+                    <div class="contenido-productos">
+    <!--               BLOCK 1                 -->
+                        <div class="content_text block" data-seccion="1">
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/burger/1burger.png" alt="burger 1" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">La Jugosa</h1>
+                                        <h2 class="descripcion-productos">Hamburguesa con Carne, Doble Queso Cheddar, Lechuga, Tomate, Pepinillos, Cebolla, Mayonesa, Ketchup</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$5200</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/burger/2burger.png" alt="burger 2" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Bacon Mozzarella</h1>
+                                        <h2 class="descripcion-productos">Hamburguesa con Carne, Bacon, Queso Mozzarella, Lechuga, Cebolla, Salsa de Ajo</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$5800</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/burger/3burger.png" alt="burger 3" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Bacon Mozzarella Doble</h1>
+                                        <h2 class="descripcion-productos">Hamburguesa Doble Carne, Doble Queso Mozzarella, Bacon, Lechuga, Cebolla, Salsa de Ajo</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$6600</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/burger/4burger.png" alt="burger 4" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Cheddar Melt</h1>
+                                        <h2 class="descripcion-productos">Hamburguesa con Carne, Queso Cheddar, Pepinillos, Salsa de Queso, Ketchup</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$5100</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/burger/5burger.png" alt="burger 5" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Bacon Cheddar Simple</h1>
+                                        <h2 class="descripcion-productos">Hamburguesa con Carne, Bacon, Queso Cheddar, Salsa de Queso y Mayonesa</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$5700</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/burger/6burger.png" alt="burger 6" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Crispy BBQ Bacon</h1>
+                                        <h2 class="descripcion-productos">Hamburguesa con Carne, Queso Mozzarella, Bacon, Cebolla Crispy, Salsa BBQ</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$5700</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/burger/7burger.png" alt="burger 7" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Baconator</h1>
+                                        <h2 class="descripcion-productos">Hamburguesa con Doble Carne, Doble Bacon, Doble Queso Cheddar, Mayonesa, Ketchup</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$7600</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/burger/8burger.png" alt="burger 8" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Crispy BBQ Bacon Doble</h1>
+                                        <h2 class="descripcion-productos">Hamburguesa con Doble Carne, 2 Queso Mozzarella, Bacon, Cebolla Crispy, Salsa BBQ</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$7000</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/burger/9burger.png" alt="burger 9" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Baconator Triple</h1>
+                                        <h2 class="descripcion-productos">Hamburguesa con Triple Carne, Triple Bacon, Triple Queso Cheddar, Mayonesa, Ketchup</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$10300</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+    <!--               BLOCK 2                 -->
+                        <div class="content_text block hidden" data-seccion="2">
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-pizza" src="/img/productos/pizzas/1pizza.png" alt="Pizza 1" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Doble Queso</h1>
+                                        <h2 class="descripcion-productos">Doble queso mozzarella y salsa de tomate.</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$5600</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-pizza" src="/img/productos/pizzas/2pizza.png" alt="Pizza 2" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Pepperoni</h1>
+                                        <h2 class="descripcion-productos">Pepperoni, queso mozzarella y salsa de tomate.</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$6100</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-pizza" src="/img/productos/pizzas/3pizza.png" alt="Pizza 3" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Napolitana</h1>
+                                        <h2 class="descripcion-productos">Tomate, mezcla de orégano parmesano, queso mozzarella y salsa de tomate.</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$5600</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-pizza" src="/img/productos/pizzas/4pizza.png" alt="Pizza 4" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Romana</h1>
+                                        <h2 class="descripcion-productos">Pepperoni, cebolla, aceitunas, queso mozzarella y salsa de tomate.</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$6500</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-pizza" src="/img/productos/pizzas/5pizza.png" alt="Pizza 5" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Italiana</h1>
+                                        <h2 class="descripcion-productos">Jamón, tomate, mezcla de orégano parmesano, queso mozzarella y salsa de tomate.</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$6100</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-pizza" src="/img/productos/pizzas/6pizza.png" alt="Pizza 6" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">La Mechada</h1>
+                                        <h2 class="descripcion-productos">Carne Mechada, tomate, mezcla de orégano y parmesano y salsa de tomate</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$8500</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-pizza" src="/img/productos/pizzas/7pizza.png" alt="Pizza 7" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Doble Pepperoni</h1>
+                                        <h2 class="descripcion-productos">Doble pepperoni, queso mozzarella y salsa de tomate.</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$7500</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-pizza" src="/img/productos/pizzas/8pizza.png" alt="Pizza 8" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Vegetariana</h1>
+                                        <h2 class="descripcion-productos">Aceitunas, champiñón, tomate, choclo, pimiento verde, cebolla, queso mozzarella y salsa de tomate.</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$8500</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-pizza" src="/img/productos/pizzas/9pizza.png" alt="Pizza 9" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Pollo BBQ</h1>
+                                        <h2 class="descripcion-productos">Pollo, tocino, cebolla, queso mozzarella y salsa BBQ.</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$8700</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+    <!--               BLOCK 3                 -->
+                        <div class="content_text block hidden" data-seccion="3">
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-panchos" src="/img/productos/panchitos/hotdog1.png" alt="Panchito 1" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">El Ácido</h1>
+                                        <h2 class="descripcion-productos">Pan de completo, vienesa premium, mostaza, ketchup, pepinillos</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$2500</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/panchitos/hotdog2.png" alt="Panchito 2" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">El Fuerte</h1>
+                                        <h2 class="descripcion-productos">Pan de completo, vienesa a la parrilla, mostaza, ají, cebolla, pepinillo</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$2700</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-panchos" src="/img/productos/panchitos/hotdog3.png" alt="Panchito 3" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">El Pica Pica</h1>
+                                        <h2 class="descripcion-productos">Pan de completo, vienesa premium, mostaza, mayonesa casera, ají, pimenton</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$2200</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/panchitos/hotdog4.png" alt="Panchito 4" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">El Sencillo</h1>
+                                        <h2 class="descripcion-productos">Pan de completo, vienesa premium, mostaza, ketchup</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$2000</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/panchitos/hotdog5.png" alt="Completo 5" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Completo Chileno</h1>
+                                        <h2 class="descripcion-productos">Pan de completo, vienesa premium, palta, tomate, chucrut, mayonesa casera</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$3500</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>     
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/panchitos/hotdog6.png" alt="Completo 6" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">As</h1>
+                                        <h2 class="descripcion-productos">Pan de completo, churrasco, palta, tomate, chucrut, mayonesa casera</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$4500</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/panchitos/hotdog7.png" alt="Completo 7" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">El Raro</h1>
+                                        <h2 class="descripcion-productos">Pan de completo,churrasco, tomate, mayonesa casera, porotos verdes, ají</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$4300</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos-panchos" src="/img/productos/panchitos/hotdog8.png" alt="Completo 8" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Completo Veggie</h1>
+                                        <h2 class="descripcion-productos">Pan de completo, vienesa vegetal, palta, tomate, chucrut, mayonesa casera</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$3800</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/panchitos/hotdog9.png" alt="Completo 9" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">El Picante </h1>
+                                        <h2 class="descripcion-productos">Pan de completo, churrasco, palta, tomate, mucho ají, mayonesa casera</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$4500</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+
+                        </div>
+
+    <!--               BLOCK 4                 -->
+                        <div class="content_text block hidden" data-seccion="4">
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/snacks/10nuggetsdepollo.png" alt="Nuggets" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Nuggets</h1>
+                                        <h2 class="descripcion-productos">10 Nuggets de pollo con ketchup</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$3990</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/snacks/palitosajo.png" alt="Palitos" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Palitos de ajo</h1>
+                                        <h2 class="descripcion-productos">10 palitos de ajo con orégano</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$3200</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/snacks/4pandeajo.png" alt="Pan" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Pan de ajo</h1>
+                                        <h2 class="descripcion-productos">4 pan de ajo con orégano y queso</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$3390</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/snacks/empanadas.png" alt="Empanadas" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Empanadas de queso</h1>
+                                        <h2 class="descripcion-productos">10 empanadas de queso</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$2900</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/snacks/6alitasdepolloBBQ.png" alt="Alitas" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Alitas de Pollo BBQ</h1>
+                                        <h2 class="descripcion-productos">6 alitas de pollo BBQ</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$5490</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/snacks/Aros-cebolla-x-12.png" alt="Aros" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Aros de cebolla</h1>
+                                        <h2 class="descripcion-productos">10 aros de cebolla fritos</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$1990</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/snacks/Nuggets-Vegetal.png" alt="Nuggets" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Nuggets Vegetal</h1>
+                                        <h2 class="descripcion-productos">8 Nuggets de origen vegetal</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$4200</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="container-card">
+                                <div class="card-productos">
+                                    <img class="img-productos" src="/img/productos/snacks/Toastiesmeat.png" alt="Toasties" />
+                                    <div class="detalles-productos">
+                                        <h1 class="nombre-productos">Toasties carne</h1>
+                                        <h2 class="descripcion-productos">2 Toasties con carne, queso, salsa de tomate</h2>
+                                        <div class="contenedor-precio-button">
+                                            <span class="precio-producto">$5990</span>
+                                            <button class="btn-plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+
+                        </div>
                 
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- FORMULARIO -->
-        <section>
+        <section id="contact">
             <!-- Imagen Superior de la olita xd -->
             <div class="contenedor-formulario__imagen__superior">
                 <svg viewBox="0 0 1440 252" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -181,9 +774,31 @@
 
     <!-- PIE DE PÁGINA-->
     <footer>
-
+        <div class="edificios">
+            <img src="./img/img-footer/ciudad.png" alt="">
+        </div>
+        <div class="info-footer">
+            <img src="./img/img-footer/foodtruck.png" alt="" class="foodtruck">
+            <div class="conteiner-footer">
+                <div class="conteiner-text-ft">
+                    <div class="conteiner-info-text">
+                        <p class="textFooter">Contacto</p>
+                        <p class="textFooter">Soporte</p>
+                        <p class="textFooter">Politica y acuerdos</p>
+                    </div>
+                    <p class="derechos">Todos los derechos reservados. © 2024 Pica y Corre </p>
+                </div>
+                <img src="./img/LOGOBLANCO.svg" alt="" class="logoFooter">
+            </div>
+        </div>
     </footer>
 
-    <script src="./js/script.js"></script>
 </body>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollspy/1.0.0/jquery-scrollspy.min.js"></script> -->
+<script type="text/javascript" src="/node_modules/slick-carousel/slick/slick.min.js"></script>
+<script src="js/script.js"></script>
+
 </html>

@@ -224,6 +224,7 @@ header{
 
 form{
     min-height: 65vh;
+    position: relative;
 }
 
 .contenedor-formulario__inputs{
@@ -329,11 +330,20 @@ form{
 } 
 
 .boton-formulario:hover{
-    background-color: #ffb414;
+    background-color: var(--color-btn-hover);
+    transform: scale(1.1);
+    transition:0.3s;
 } 
 
 .boton-formulario:active {
-    transform: scale(0.98);
+    transform: scale(1);
+}
+
+.validador{
+    display: none;
+    background-color: #000000;
+    width: 0;
+    height: 0;
 }
 
 /* ********************************** */

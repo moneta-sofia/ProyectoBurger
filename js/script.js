@@ -150,6 +150,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll('.btn-plus');
+  buttons.forEach(button =>{
+    button.addEventListener('click', () => {
+      button.parentElement.innerHTML='<button class="btn-cantidad-menos btn-cantidad">-</button><p class="cantidad" id='+ String(button.id) +'>1</p><button class="btn-cantidad-mas btn-cantidad">+</button>'
+      const btnMenos = document.querySelectorAll('.btn-cantidad-menos');
+      const btnMas = document.querySelectorAll('.btn-cantidad-mas');
+      btnMas.forEach(btnm =>{
+        btnm.addEventListener('click', () => {
+          cantidad = btnm.previousSibling.innerHTML
+          if (Number(cantidad) >= 1) {
+            btnm.previousSibling.innerHTML = Number(cantidad) + 1
+          }
+        })
+      })
+      btnMenos.forEach(btnm =>{
+        btnm.addEventListener('click', () => {
+          cantidad = btnm.nextSibling.innerHTML
+          if (Number(cantidad) == 1) {
+            btnm.parentElement.innerHTML ='<button class="btn-plus" id='+ String(button.id) +'>+</button>'
+          }
+          else{
+            btnm.nextSibling.innerHTML = Number(cantidad) - 1
+          }
+        })
+      })
+    })
+  })
+})
+
 // Funciones de los botones del navegador
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll('.header-productos button');
@@ -312,3 +342,15 @@ inputsForm.forEach(input => {
 /* ********************************** */
 /*          PIE DE PÁGINA             */
 /* ********************************** */
+
+/* ********************************** */
+/*               LOG IN               */
+/* ********************************** */
+function login() {
+  let login = document.getElementById('login');
+  if (login.style.display == "none") {
+    login.style.display = "flex"
+  } else {
+    login.style.display = "none"
+  }
+}

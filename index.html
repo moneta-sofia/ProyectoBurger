@@ -25,7 +25,7 @@
     <meta property="twitter:image" content="https://subir-imagen.com/i/AYZag" />
 
     <!-- Meta Tags Generated with https://metatags.io -->
-    
+
 
     <!-- estilos Un CSS Reset es un conjunto de reglas CSS que se utiliza para reiniciar los estilos predeterminados de los navegadores -->
     <link rel="stylesheet" href="./css/reset.css">
@@ -71,6 +71,7 @@
                 <a href="#about" class="opciones nav-link">Sobre Nosotros</a>
                 <a href="#products" class="opciones nav-link">Productos</a>
                 <a href="#contact" class="opciones nav-link">Contáctanos</a>
+                <a href="#login" class="opciones nav-link" onclick=login()>Log In</a>
             </div>
         </nav>
 
@@ -118,7 +119,7 @@
                 <p class="opciones">Inicio</p>
             </a>
 
-            <a href="#about"  class="item">
+            <a href="#about" class="item">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 32 32">
                     <path
                         d="M 16 3 C 8.8321388 3 3 8.832144 3 16 C 3 23.167856 8.8321388 29 16 29 C 23.167861 29 29 23.167856 29 16 C 29 8.832144 23.167861 3 16 3 z M 16 5 C 22.086982 5 27 9.9130223 27 16 C 27 22.086978 22.086982 27 16 27 C 9.9130183 27 5 22.086978 5 16 C 5 9.9130223 9.9130183 5 16 5 z M 16 9 A 1 1 0 0 0 16 11 A 1 1 0 0 0 16 9 z M 15.984375 12.986328 A 1.0001 1.0001 0 0 0 15 14 L 15 22 A 1.0001 1.0001 0 1 0 17 22 L 17 14 A 1.0001 1.0001 0 0 0 15.984375 12.986328 z">
@@ -127,18 +128,26 @@
                 <p class="opciones">Sobre Nosotros</p>
             </a>
 
-            <a href="#products"  class="item">
+            <a href="#products" class="item">
                 <img
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFp0lEQVR4nO2dWWwWVRSAv9JKadHWFRGNMT5oguiLayRRcE1E340EtwcSo8RERaNRY4wG1CC4by8uuAGtoBKCiCZFEMWqvIC4oTHgEkGbqrigvznxNDHNf+/MP3Nn/vlnzpecp85/77nnzNz13FMwDMMwDMMwDMMwDMMwYrKfihGYLuA04ApgPrAMeAf4FPgZqDnkJ31Gnl0KzNMyTtUyDQfjgPOBhcB7wJ8eIycVKXOj1nEe0Fl1b3QAF+mb+ksGBo8SqXMJcKHqUhkOAe4AvmuC0V3yLXA7cDAlRhq3CPitAAavOUR0ux84iBIhn/fciMGzllCGVEKXK7reUIau6WRgcwID/ANsARYDtwEXA1OBY4BeT329+sxU/Y389nlgq5bZqB4fASfSgrQBNzY4m/kCeAiYEWHkpOyvA+7DwJcN6PUHcL22qSXYF1jRwEzkceD0nHVs06/kCeDXmLouaYWp6yTg4xiN2Q3cAhzYbIVVh1t1ERel99sZfZ1BOBL4LKIBfwMPFMTwoxGdHlQdfW3YrC9a4aaYUcb/CphG8Zmuuvrasq1IU9VxuvfiU/gZoIfWoRd4LqJNA0UYE9p0quhTVDbTWpWbItr2crNnRzdH9PdzaH2ujVhDyHS7KRwP/O5R7GrKwxxPO8UGU/JWSJbomzxKyWyibDziae+HwD5F6XpWl2EPpQ7SpjWedotNcptyujbAfgQOpbxMBHY52j4MTMhDiYWet2Am5WeWp/0L8ljtugbelVSHlQ4b7AGOyLLi+xwV7wUmUx2OBf5y2EICATKhS/v4epXKrmLVeMphix+yWiFf7qhQ3oSjqB5H65dfzyYyTgTnLUdlL1Fdljls8kboiiZ4vC27h1XlHE+vEHS3dLYnnKOd6tIBfO+wzZUhK3rFUYmcr1adxzxHmEEY45n9nBmqkhbmLM+ugNguNSd4lt5V7n7+3w25QiuPI8OltxxQG/8x4LDRJQRgvqPwe0MUXhIWOGx0d4jCX3UUfmmIwkvCZQ4bLQ9RuCvaoRUiHPJiuid6IjXDjsKHNMDKBOf5iNguNfUKNiG2DcwBNPeFSU2RbrLUWkzEdqlZVICG1FpUxHZBDmIezegmSq2kMqRhLEGvxsq+xgEmxLFBkD0gwzAMwzCazFjgHmBnjlO4LRqFcSdwUpMuQchM5hTgLj372NrAVHyHbuOL7TI7D8hTvtbAgDyiriXM/CrgmwB6B7kdtKMADqipSC6gs8mOc4HPA+ortktNrWCyV+9uhWa2J94zjaSmVlB5MtCKc4wnztMcgN8IL6YcF8T4T2f8oqQms4Id9Gio+zXAhhgNfDZheEy7/jaq/A164XByRILA0jhgNDNiTAQWN+iE9hj3m6XOCxoos7QOQHMzDEYY7IWY3VGHPusrazBBPohSO2AkfcDGCMMtjbguGufNH0yYTKT0DhhxwrsJndCu2bN8v/0gRSaXSjhgZJCOGpxfG3VNSBzSF8P4cpiSlMo4QBiv+zM+g76uThDj90c8uz5ANpdKOQCdEq6LMOyKGOnT1gXKP105BwjdwNoIA+dh/Ezt5ApNlOR8RXHCmwmMPxCwDT2OOmT7OjXbHIWfQXHobvBLWKu/CcU0Rz2fhCjcNYDJrKJIdEdkMxmRNYGNj4ah16tLrrFmFvsuch3FokvT5bj0XZ3B/xGY66lvVqiMs7s9lfTrJyhTw6IkEVxVR89V+rcQjNc2u978mqa16c3Dy1lnM1+eYF+mU48Dd6rMS5C/4XCdwu5JqHvQ3qEzxhZAlrIp54P5toiUbLUYC7sgB/Kjs0Vtb6ITppBvQsKkem7PMmvYxJiHJFV1wPo8UraN1XTurtxpWcj7Be+CdmmfH7zb8dGrV1X7NGjJtWJOOwj3A4eRP5M0R0a9f7kyrMFjfTrVLGxGdcMwDMMwDMMwDMMwDIPC8C8hchxuKktc+AAAAABJRU5ErkJggg==">
-                <p  class="opciones">Productos</p>
+                <p class="opciones">Productos</p>
             </a>
 
-            <a href="#contact"  class="item">
+            <a href="#contact" class="item">
                 <img
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADCklEQVR4nO2Zy29NURSHP7T1KAlK4jXy+gMoOmBAQlASERETjwEDaaJmjYaYlMYIKTERvZp0RBOphBkRA2aUjqoGQq4WbSQqVZPKTtaVlZVze88+9j1Hk/sle3Jz1mOfs/dav70vVKhQIQQzgQagFegB+oFR4LeMUfntPnAO2CI2mbMKaAc+AZOe4yNwGViZReJ1wC1gIkHidvwCbgKL00r+CPAtIpE8cBs4CmyQSVbLWAJsBI7JM/kI+6/A4XImXiVv3QZ+AuwFZnn4cs82Ak8j/N2QWEGZCzw0gQaAnQF87wbeGd+9EjMIVRHJdwLzQgUAaoGuiEkE+RJ22ZynfFwwsTpCbNi0ki82iUMkpM5Umxzp0aXifgEW/evSGZB1mha1ZmN3JOmwukntIn32mGa3wse4XRm7Wp0Vz1Qel3yajNY2ruFkxT6Vx4e4ArDByIPgXdGDKmBI5bM5jlGrMnC6pRhOSY4HEHPjJZZHp3q2Jc4EepSBE2ZRzAB+BEh+UobzVYzj6rl7cSbQrwycqixGW8Av0DZFnHr17Js4ExhRBq6ZZc1SI7lLout/Ddkz2/SDkuhlMYdpOIHPymAZ03AJ9SkDdwwMXUZLlU3LJt9NrJXgyTKV0anKpuWEbxltVgZ3ylBGS5VNS863ka1XBiNyq5CllBhW+bieEIu3yugA2bE/iZhznFWGL8mO5yoPn2XHAuC7MnZ3mWnTaPaN14HGMagcbCNd5gPvVfzrvg7WmpKXtqToVvGHkxzqm8wFU5pcNGX3YBInvcqBm0xWyV9L4qTGdNk1pLPmu03yDzwvjP+yXTlxdzNRuOa2NVB1ajQbtpB84svdK+aqu8Bq4LQ411/ohTS7as8O65qUrvO64iR68wVeKWdX5VZsIIbGGZED+ClRscvlPFEjf3DUizDLGXkwKWMo6Ya1/IwpygZNs0s6xuWtLyQQj4sEGpPq1CR9otCxm412ijuctmmTLxUU5/CRJPxa9sSOGM1sHXAGuCt2eXm7E7K8+kTPt8gh5b/4m7VCBaY5fwDlENrwg3MbPQAAAABJRU5ErkJggg==">
-                <p  class="opciones">Contáctanos</p>
+                <p class="opciones">Contáctanos</p>
             </a>
 
+            <a href="#login" class="item" onclick=login()>
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.3365 12.3466L14.0765 11.9195C13.9082 12.022 13.8158 12.2137 13.8405 12.4092C13.8651 12.6046 14.0022 12.7674 14.1907 12.8249L14.3365 12.3466ZM9.6634 12.3466L9.80923 12.8249C9.99769 12.7674 10.1348 12.6046 10.1595 12.4092C10.1841 12.2137 10.0917 12.022 9.92339 11.9195L9.6634 12.3466ZM4.06161 19.002L3.56544 18.9402L4.06161 19.002ZM19.9383 19.002L20.4345 18.9402L19.9383 19.002ZM16 8.5C16 9.94799 15.2309 11.2168 14.0765 11.9195L14.5965 12.7737C16.0365 11.8971 17 10.3113 17 8.5H16ZM12 4.5C14.2091 4.5 16 6.29086 16 8.5H17C17 5.73858 14.7614 3.5 12 3.5V4.5ZM7.99996 8.5C7.99996 6.29086 9.79082 4.5 12 4.5V3.5C9.23854 3.5 6.99996 5.73858 6.99996 8.5H7.99996ZM9.92339 11.9195C8.76904 11.2168 7.99996 9.948 7.99996 8.5H6.99996C6.99996 10.3113 7.96342 11.8971 9.40342 12.7737L9.92339 11.9195ZM9.51758 11.8683C6.36083 12.8309 3.98356 15.5804 3.56544 18.9402L4.55778 19.0637C4.92638 16.1018 7.02381 13.6742 9.80923 12.8249L9.51758 11.8683ZM3.56544 18.9402C3.45493 19.8282 4.19055 20.5 4.99996 20.5V19.5C4.70481 19.5 4.53188 19.2719 4.55778 19.0637L3.56544 18.9402ZM4.99996 20.5H19V19.5H4.99996V20.5ZM19 20.5C19.8094 20.5 20.545 19.8282 20.4345 18.9402L19.4421 19.0637C19.468 19.2719 19.2951 19.5 19 19.5V20.5ZM20.4345 18.9402C20.0164 15.5804 17.6391 12.8309 14.4823 11.8683L14.1907 12.8249C16.9761 13.6742 19.0735 16.1018 19.4421 19.0637L20.4345 18.9402Z"
+                        fill="#000000" />
+                </svg>
+                <p class="opciones">Log In</p>
+            </a>
 
 
         </div>
@@ -277,7 +286,9 @@
                                             Lechuga, Tomate, Pepinillos, Cebolla, Mayonesa, Ketchup</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$5200</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-lajugosa">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -291,7 +302,9 @@
                                             Mozzarella, Lechuga, Cebolla, Salsa de Ajo</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$5800</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-baconmozzarella">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -305,7 +318,9 @@
                                             Mozzarella, Bacon, Lechuga, Cebolla, Salsa de Ajo</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$6600</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-baconmozzarella-doble">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -319,7 +334,9 @@
                                             Pepinillos, Salsa de Queso, Ketchup</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$5100</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-cheddar-melt">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -333,7 +350,9 @@
                                             Salsa de Queso y Mayonesa</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$5700</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-bacon-cheddar-simple">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -347,7 +366,9 @@
                                             Bacon, Cebolla Crispy, Salsa BBQ</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$5700</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-chispy-bbq-bacon">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -361,7 +382,9 @@
                                             Doble Queso Cheddar, Mayonesa, Ketchup</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$7600</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-baconator">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -375,7 +398,9 @@
                                             Mozzarella, Bacon, Cebolla Crispy, Salsa BBQ</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$7000</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-chispy-bbq-bacon-doble">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -389,7 +414,9 @@
                                             Triple Queso Cheddar, Mayonesa, Ketchup</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$10300</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-baconator-triple">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -409,7 +436,9 @@
                                         <h2 class="descripcion-productos">Doble queso mozzarella y salsa de tomate.</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$5600</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-doble-queso">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -424,7 +453,9 @@
                                         </h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$6100</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-pepperoni">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -439,7 +470,9 @@
                                             mozzarella y salsa de tomate.</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$5600</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-napolitana">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -454,7 +487,9 @@
                                             mozzarella y salsa de tomate.</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$6500</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-romana">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -469,7 +504,9 @@
                                             queso mozzarella y salsa de tomate.</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$6100</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-italiana">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -484,7 +521,9 @@
                                             parmesano y salsa de tomate</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$8500</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-la-mechada">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -499,7 +538,9 @@
                                             tomate.</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$7500</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-doble-pepperoni">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -514,7 +555,9 @@
                                             verde, cebolla, queso mozzarella y salsa de tomate.</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$8500</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-vegetariana">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -529,7 +572,9 @@
                                             salsa BBQ.</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$8700</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-pollo-bbq">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -549,7 +594,9 @@
                                             ketchup, pepinillos</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$2500</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-el-acido">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -564,7 +611,9 @@
                                             mostaza, ají, cebolla, pepinillo</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$2700</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-el-fuerte">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -579,7 +628,9 @@
                                             mayonesa casera, ají, pimenton</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$2200</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-el-pica-pica">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -594,7 +645,9 @@
                                             ketchup</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$2000</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-el-sencillo">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -609,7 +662,9 @@
                                             tomate, chucrut, mayonesa casera</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$3500</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-completo-chileno">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -624,7 +679,9 @@
                                             chucrut, mayonesa casera</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$4500</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-as">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -639,7 +696,9 @@
                                             casera, porotos verdes, ají</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$4300</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-el-raro">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -654,7 +713,9 @@
                                             tomate, chucrut, mayonesa casera</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$3800</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-completo-veggie">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -669,7 +730,9 @@
                                             mucho ají, mayonesa casera</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$4500</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-el-picante">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -688,7 +751,9 @@
                                         <h2 class="descripcion-productos">10 Nuggets de pollo con ketchup</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$3990</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-nuggets">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -702,7 +767,9 @@
                                         <h2 class="descripcion-productos">10 palitos de ajo con orégano</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$3200</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-palitos-de-ajo">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -715,7 +782,9 @@
                                         <h2 class="descripcion-productos">4 pan de ajo con orégano y queso</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$3390</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-pan-de-ajo">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -729,7 +798,9 @@
                                         <h2 class="descripcion-productos">10 empanadas de queso</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$2900</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-empanadas-de-queso">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -743,7 +814,9 @@
                                         <h2 class="descripcion-productos">6 alitas de pollo BBQ</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$5490</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-alitas-de-pollo-bbq">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -757,7 +830,9 @@
                                         <h2 class="descripcion-productos">10 aros de cebolla fritos</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$1990</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-aros-de-cebolla">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -771,7 +846,9 @@
                                         <h2 class="descripcion-productos">8 Nuggets de origen vegetal</h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$4200</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-nuggets-vegetal">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -786,7 +863,9 @@
                                         </h2>
                                         <div class="contenedor-precio-button">
                                             <span class="precio-producto">$5990</span>
-                                            <button class="btn-plus">+</button>
+                                            <div class="btn-productos">
+                                                <button class="btn-plus" id="cantidad-toasties-carne">+</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -897,7 +976,32 @@
             </div>
         </div>
     </footer>
-
+    <div id="login" style="display: none;">
+        <div class="card-login">
+            <div class="contenedor-img-login">
+                <img src="./img/img-footer/ciudad.png" alt="" class="ciudad-login">
+                <img src="./img/img-footer/foodtruck.png" alt="" class="foodtruck-login">
+                <img src="./img/LOGOBLANCO.svg" alt="" class="logo-blanco-login">
+                <p class="picaycorre-login">PICA Y CORRE</p>
+            </div>
+            <div class="contenedor-login">
+                <button class="login-out" onclick=login()>X</button>
+                <p class="titulo-login">Inicio Sesion</p>
+                <div class="usuario-login">
+                    <label class="login-label" for="usuario">Usuario</label>
+                    <input class="login-input" type="text" id="usuario" maxlength="50"
+                    placeholder="Escriba su usuario aquí..." required>
+                    <label class="login-label" for="email">Correo</label>
+                    <input class="login-input" type="email" id="email" placeholder="example@gmail.com"
+                    required>
+                    <label class="login-label" for="contrasenia">Contraseña</label>
+                    <input class="login-input" type="password" id="contrasenia" placeholder="**********"
+                    required>
+                    <button id="boton-login" class="boton-login" type="submit">ENVIAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

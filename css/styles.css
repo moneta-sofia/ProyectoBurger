@@ -1519,7 +1519,7 @@ form{
         font-size: 1.5vw;
     }
 }
-@media only screen and (min-width: 425px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) {
     .card-login{
         height: 50%;
         width: 70%;
@@ -1574,7 +1574,7 @@ form{
         font-size: 2.2vw;
     }
 }
-@media (max-width:424px) {
+@media only screen and (min-width: 375px) and (max-width: 575px){
     .card-login{
         height: 50%;
         width: 70%;
@@ -1616,16 +1616,71 @@ form{
     .login-label{
         margin: 1vw .7vw .5vw;
         min-height: 1vw;
-        font-size: 2.7vw;
+        font-size: 2.5vw;
     }
     .login-input{
         height: 3.5vw;
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
     .boton-login{
         width: 25%;
         height: auto;
         margin: 2vw auto;
-        font-size: 2.4vw;
+        font-size: 3.5vw;
+    }
+}
+@media (max-width:374px){
+    .card-login{
+        height: 50%;
+        width: 70%;
+    }
+    .contenedor-login{
+        margin-top: 0px;
+    }
+    .img-login-conteiner{
+        padding: 8px;
+    }
+    .ciudad-login{
+        bottom: 50px;
+        width: 100%;
+        height: 65%;
+    }
+    .foodtruck-login{
+        bottom: 10px;
+        width: 50%;
+        height: 55%;
+    }
+    .logo-blanco-login{
+        height:30px;
+        width: 30px;
+    }
+    .picaycorre-login{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .login-out{
+        border-radius: 99px;
+        font-size: 12px;
+        width: 22px;
+        height: 22px;
+    }
+    .titulo-login{
+        font-size: 16px;
+        margin-top:0px;
+    }
+    .login-label{
+        margin: 1vw .7vw .5vw;
+        min-height: 1vw;
+        font-size: 3.2vw;
+    }
+    .login-input{
+        height: 4.2vw;
+        font-size: 3.2vw;
+    }
+    .boton-login{
+        width: 25%;
+        height: auto;
+        margin: 2vw auto;
+        font-size: 3.5vw;
     }
 }

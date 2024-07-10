@@ -980,21 +980,31 @@
         <div class="card-login">
             <div class="contenedor-img-login">
                 <img src="./img/img-footer/ciudad.png" alt="" class="ciudad-login">
-                <img src="./img/img-footer/foodtruck.png" alt="" class="foodtruck-login">
-                <img src="./img/LOGOBLANCO.svg" alt="" class="logo-blanco-login">
-                <p class="picaycorre-login">PICA Y CORRE</p>
+                <div class="contenedor-foodtruck">
+                    <img src="./img/img-footer/foodtruck.png" alt="" class="foodtruck-login">
+                </div>
+                <div class="img-login-conteiner">
+                    <img src="./img/LOGOBLANCO.svg" alt="" class="logo-blanco-login">
+                    <p class="picaycorre-login">PICA Y CORRE</p>
+                    <button class="login-out" onclick=login()>X</button>
+                </div>
             </div>
             <div class="contenedor-login">
-                <button class="login-out" onclick=login()>X</button>
                 <p class="titulo-login">Inicio Sesion</p>
                 <div class="usuario-login">
-                    <label class="login-label" for="usuario">Usuario</label>
+                    <div class="conteiner-inputs">
+                        <label class="login-label" for="usuario">Usuario</label>
+                    </div>
                     <input class="login-input" type="text" id="usuario" maxlength="50"
-                    placeholder="Escriba su usuario aquí..." required>
-                    <label class="login-label" for="email">Correo</label>
+                        placeholder="Escriba su usuario aquí..." required>
+                    <div class="conteiner-inputs">
+                        <label class="login-label" for="email">Correo</label>
+                    </div>
                     <input class="login-input" type="email" id="email" placeholder="example@gmail.com"
-                    required>
-                    <label class="login-label" for="contrasenia">Contraseña</label>
+                        required>
+                    <div class="conteiner-inputs">
+                        <label class="login-label" for="contrasenia">Contraseña</label>
+                    </div>
                     <input class="login-input" type="password" id="contrasenia" placeholder="**********"
                     required>
                     <button id="boton-login" class="boton-login" type="submit">ENVIAR</button>

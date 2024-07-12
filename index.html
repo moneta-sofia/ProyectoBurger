@@ -26,7 +26,6 @@
 
     <!-- Meta Tags Generated with https://metatags.io -->
 
-
     <!-- estilos Un CSS Reset es un conjunto de reglas CSS que se utiliza para reiniciar los estilos predeterminados de los navegadores -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
@@ -44,53 +43,62 @@
         rel="stylesheet">
     <!-- logo y título de la pestaña del navegador -->
     <link rel="shortcut icon" href="img/favicon.png">
-
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 
     <title>Pica y Corre</title>
-
-
 </head>
 
 <body>
     <!-- MENÚ DE NAVEGACIÓN -->
     <header>
-
         <!-- Desktop -->
-        <nav class="navbarDesktop">
-            <a href="#banner" class="logoContainer">
-                <img src="img/LOGO.svg" alt="Logo" id="logoDesktop">
-                <p>PICA Y CORRE</p>
-            </a>
-
-            <div class="opcionesContainer">
-                <a href="#banner" class="opciones nav-link">Inicio</a>
-                <a href="#about" class="opciones nav-link">Sobre Nosotros</a>
-                <a href="#products" class="opciones nav-link">Productos</a>
-                <a href="#contact" class="opciones nav-link">Contáctanos</a>
-                <a href="#login" class="opciones nav-link" onclick=login()>Log In</a>
-            </div>
-        </nav>
-
-        <!-- Mobile -->
-        <nav class="navbarMobile">
-            <button class="menuButton" onclick=turnDesplegable(true)>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" id="menuLogo">
-                    <path
-                        d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
-                    </path>
+        <div class="navbar">
+            <nav class="navbarDesktop">
+                <a href="#banner" class="logoContainer">
+                    <img src="img/LOGO.svg" alt="Logo" id="logoDesktop">
+                    <p>PICA Y CORRE</p>
+                </a>
+                <div class="opcionesContainer">
+                    <a href="#banner" class="opciones nav-link">Inicio</a>
+                    <a href="#about" class="opciones nav-link">Sobre Nosotros</a>
+                    <a href="#products" class="opciones nav-link">Productos</a>
+                    <a href="#contact" class="opciones nav-link">Contáctanos</a>
+                    <a href="#login" class="opciones nav-link" onclick=login()>Log In</a>
+                </div>
+            </nav>
+            <!-- Carrito -->
+            <button class="carritoButton" style="display: none;" onclick=carrito()>
+                <svg height="30px" width="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.16 44.16" xml:space="preserve">
+                    <g>
+                        <path style="fill:#010002;" d="M44.16,6.6H11.592L10.66,1.179H2.408C1.076,1.179,0,2.257,0,3.588v2.408h6.602l4.248,24.709
+		c0.094,0.544,0.617,0.985,1.17,0.985h28.527c1.332,0,2.41-1.077,2.41-2.411v-2.406H15.078l-0.587-3.414h22.042
+		c2.66,0,5.172-2.128,5.611-4.75L44.16,6.6z" />
+                        <circle style="fill:#010002;" cx="19.47" cy="38.817" r="4.165" />
+                        <path style="fill:#010002;" d="M29.762,38.816c0,2.299,1.863,4.164,4.162,4.164c2.301,0,4.168-1.865,4.168-4.164
+		c0-2.299-1.867-4.166-4.168-4.166C31.625,34.65,29.762,36.518,29.762,38.816z" />
+                    </g>
                 </svg>
             </button>
-
-            <a class="logoMobile" href="#banner">
-                <img src="img/LOGO.svg" alt="Logo" id="logoMobile">
-                <!--<p>PICA Y CORRE</p>  -->
-                </div>
-        </nav>
-
+        </div>
+        <!-- Mobile -->
+        <div class="navbar">
+            <nav class="navbarMobile">
+                <button class="menuButton" onclick=turnDesplegable(true)>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" id="menuLogo">
+                        <path
+                            d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
+                        </path>
+                    </svg>
+                </button>
+                <a class="logoMobile" href="#banner">
+                    <img src="img/LOGO.svg" alt="Logo" id="logoMobile">
+                    <!--<p>PICA Y CORRE</p>  -->
+            </nav>
+        </div>
         <!-- Desplegable Navbar Mobile -->
         <div id="fondoOscuro" class="navbarCerrado"></div>
         <div id="opcionesMobile" class="navbarCerrado">
@@ -103,13 +111,10 @@
                     </svg>
                 </button>
             </div>
-
             <div id="logoDesplegablecontainer">
                 <img src="img/LOGO.svg" alt="Logo" id="logoDesplegable">
                 <p>PICA Y CORRE</p>
             </div>
-
-
             <a class="item" href="#banner" class="opciones">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
                     <path
@@ -118,7 +123,6 @@
                 </svg>
                 <p class="opciones">Inicio</p>
             </a>
-
             <a href="#about" class="item">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 32 32">
                     <path
@@ -127,19 +131,16 @@
                 </svg>
                 <p class="opciones">Sobre Nosotros</p>
             </a>
-
             <a href="#products" class="item">
                 <img
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFp0lEQVR4nO2dWWwWVRSAv9JKadHWFRGNMT5oguiLayRRcE1E340EtwcSo8RERaNRY4wG1CC4by8uuAGtoBKCiCZFEMWqvIC4oTHgEkGbqrigvznxNDHNf+/MP3Nn/vlnzpecp85/77nnzNz13FMwDMMwDMMwDMMwDMMwYrKfihGYLuA04ApgPrAMeAf4FPgZqDnkJ31Gnl0KzNMyTtUyDQfjgPOBhcB7wJ8eIycVKXOj1nEe0Fl1b3QAF+mb+ksGBo8SqXMJcKHqUhkOAe4AvmuC0V3yLXA7cDAlRhq3CPitAAavOUR0ux84iBIhn/fciMGzllCGVEKXK7reUIau6WRgcwID/ANsARYDtwEXA1OBY4BeT329+sxU/Y389nlgq5bZqB4fASfSgrQBNzY4m/kCeAiYEWHkpOyvA+7DwJcN6PUHcL22qSXYF1jRwEzkceD0nHVs06/kCeDXmLouaYWp6yTg4xiN2Q3cAhzYbIVVh1t1ERel99sZfZ1BOBL4LKIBfwMPFMTwoxGdHlQdfW3YrC9a4aaYUcb/CphG8Zmuuvrasq1IU9VxuvfiU/gZoIfWoRd4LqJNA0UYE9p0quhTVDbTWpWbItr2crNnRzdH9PdzaH2ujVhDyHS7KRwP/O5R7GrKwxxPO8UGU/JWSJbomzxKyWyibDziae+HwD5F6XpWl2EPpQ7SpjWedotNcptyujbAfgQOpbxMBHY52j4MTMhDiYWet2Am5WeWp/0L8ljtugbelVSHlQ4b7AGOyLLi+xwV7wUmUx2OBf5y2EICATKhS/v4epXKrmLVeMphix+yWiFf7qhQ3oSjqB5H65dfzyYyTgTnLUdlL1Fdljls8kboiiZ4vC27h1XlHE+vEHS3dLYnnKOd6tIBfO+wzZUhK3rFUYmcr1adxzxHmEEY45n9nBmqkhbmLM+ugNguNSd4lt5V7n7+3w25QiuPI8OltxxQG/8x4LDRJQRgvqPwe0MUXhIWOGx0d4jCX3UUfmmIwkvCZQ4bLQ9RuCvaoRUiHPJiuid6IjXDjsKHNMDKBOf5iNguNfUKNiG2DcwBNPeFSU2RbrLUWkzEdqlZVICG1FpUxHZBDmIezegmSq2kMqRhLEGvxsq+xgEmxLFBkD0gwzAMwzCazFjgHmBnjlO4LRqFcSdwUpMuQchM5hTgLj372NrAVHyHbuOL7TI7D8hTvtbAgDyiriXM/CrgmwB6B7kdtKMADqipSC6gs8mOc4HPA+ortktNrWCyV+9uhWa2J94zjaSmVlB5MtCKc4wnztMcgN8IL6YcF8T4T2f8oqQms4Id9Gio+zXAhhgNfDZheEy7/jaq/A164XByRILA0jhgNDNiTAQWN+iE9hj3m6XOCxoos7QOQHMzDEYY7IWY3VGHPusrazBBPohSO2AkfcDGCMMtjbguGufNH0yYTKT0DhhxwrsJndCu2bN8v/0gRSaXSjhgZJCOGpxfG3VNSBzSF8P4cpiSlMo4QBiv+zM+g76uThDj90c8uz5ANpdKOQCdEq6LMOyKGOnT1gXKP105BwjdwNoIA+dh/Ezt5ApNlOR8RXHCmwmMPxCwDT2OOmT7OjXbHIWfQXHobvBLWKu/CcU0Rz2fhCjcNYDJrKJIdEdkMxmRNYGNj4ah16tLrrFmFvsuch3FokvT5bj0XZ3B/xGY66lvVqiMs7s9lfTrJyhTw6IkEVxVR89V+rcQjNc2u978mqa16c3Dy1lnM1+eYF+mU48Dd6rMS5C/4XCdwu5JqHvQ3qEzxhZAlrIp54P5toiUbLUYC7sgB/Kjs0Vtb6ITppBvQsKkem7PMmvYxJiHJFV1wPo8UraN1XTurtxpWcj7Be+CdmmfH7zb8dGrV1X7NGjJtWJOOwj3A4eRP5M0R0a9f7kyrMFjfTrVLGxGdcMwDMMwDMMwDMMwDIPC8C8hchxuKktc+AAAAABJRU5ErkJggg==">
                 <p class="opciones">Productos</p>
             </a>
-
             <a href="#contact" class="item">
                 <img
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADCklEQVR4nO2Zy29NURSHP7T1KAlK4jXy+gMoOmBAQlASERETjwEDaaJmjYaYlMYIKTERvZp0RBOphBkRA2aUjqoGQq4WbSQqVZPKTtaVlZVze88+9j1Hk/sle3Jz1mOfs/dav70vVKhQIQQzgQagFegB+oFR4LeMUfntPnAO2CI2mbMKaAc+AZOe4yNwGViZReJ1wC1gIkHidvwCbgKL00r+CPAtIpE8cBs4CmyQSVbLWAJsBI7JM/kI+6/A4XImXiVv3QZ+AuwFZnn4cs82Ak8j/N2QWEGZCzw0gQaAnQF87wbeGd+9EjMIVRHJdwLzQgUAaoGuiEkE+RJ22ZynfFwwsTpCbNi0ki82iUMkpM5Umxzp0aXifgEW/evSGZB1mha1ZmN3JOmwukntIn32mGa3wse4XRm7Wp0Vz1Qel3yajNY2ruFkxT6Vx4e4ArDByIPgXdGDKmBI5bM5jlGrMnC6pRhOSY4HEHPjJZZHp3q2Jc4EepSBE2ZRzAB+BEh+UobzVYzj6rl7cSbQrwycqixGW8Av0DZFnHr17Js4ExhRBq6ZZc1SI7lLout/Ddkz2/SDkuhlMYdpOIHPymAZ03AJ9SkDdwwMXUZLlU3LJt9NrJXgyTKV0anKpuWEbxltVgZ3ylBGS5VNS863ka1XBiNyq5CllBhW+bieEIu3yugA2bE/iZhznFWGL8mO5yoPn2XHAuC7MnZ3mWnTaPaN14HGMagcbCNd5gPvVfzrvg7WmpKXtqToVvGHkxzqm8wFU5pcNGX3YBInvcqBm0xWyV9L4qTGdNk1pLPmu03yDzwvjP+yXTlxdzNRuOa2NVB1ajQbtpB84svdK+aqu8Bq4LQ411/ohTS7as8O65qUrvO64iR68wVeKWdX5VZsIIbGGZED+ClRscvlPFEjf3DUizDLGXkwKWMo6Ya1/IwpygZNs0s6xuWtLyQQj4sEGpPq1CR9otCxm412ijuctmmTLxUU5/CRJPxa9sSOGM1sHXAGuCt2eXm7E7K8+kTPt8gh5b/4m7VCBaY5fwDlENrwg3MbPQAAAABJRU5ErkJggg==">
                 <p class="opciones">Contáctanos</p>
             </a>
-
             <a href="#login" class="item" onclick=login()>
                 <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -148,16 +149,10 @@
                 </svg>
                 <p class="opciones">Log In</p>
             </a>
-
-
         </div>
-
-
     </header>
-
     <main>
         <!-- BANNER -->
-
         <section id="banner">
             <div class="slides" id="asddas">
                 <div id="slide-1" class="eachSlider">
@@ -177,9 +172,7 @@
                                 mozzarella, bacon, cebolla crispy, salsa BBQ</p>
                         </div>
                     </div>
-
                 </div>
-
                 <div id="slide-2" class="eachSlider">
                     <div class="eachBanner">
                         <div class="imgbanner">
@@ -198,8 +191,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div id="slide-3" class="eachSlider">
                     <div class="eachBanner">
                         <div class="imgbanner">
@@ -211,15 +202,12 @@
                                 <img src="img/Banner/hotdog.webp" class="burgerImage" alt="Hotdog">
                             </div>
                         </div>
-
                         <div class="textContainer">
                             <h3>EL PICANTE</h3>
                             <p class="textoChico">Contiene pan, queso, oregano, tomate , mucho ají, mayonesa casera</p>
                         </div>
-
                     </div>
                 </div>
-
                 <div id="slide-4" class="eachSlider">
                     <div class="eachBanner">
                         <div class="imgbanner">
@@ -231,20 +219,15 @@
                                 <img src="img/Banner/empanadas.webp" class="burgerImage" alt="Empanadas">
                             </div>
                         </div>
-
                         <div class="textContainer">
                             <h3>QUESO TURBO</h3>
                             <p class="textoChico">Contiene queso mozzarella, masa de trigo, cebolla picada, orégano y
                                 sal</p>
                         </div>
-
                     </div>
                 </div>
-
             </div>
-
         </section>
-
         <!-- ABOUT US -->
         <section id="about">
             <div id="textContainerAbout">
@@ -258,9 +241,7 @@
                 <img src="img/About/Juan.png" alt="Juan">
             </div>
             <img src="img/About/wave.svg" alt="" class="wave">
-
         </section>
-
         <!-- PRODUCTOS -->
         <section id="products">
             <div class="container-principal-productos">
@@ -421,10 +402,7 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
-
                         <!--               BLOCK 2                 -->
                         <div class="content_text block hidden" data-seccion="2">
                             <div class="container-card">
@@ -579,9 +557,7 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                         <!--               BLOCK 3                 -->
                         <div class="content_text block hidden" data-seccion="3">
                             <div class="container-card">
@@ -737,9 +713,7 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                         <!--               BLOCK 4                 -->
                         <div class="content_text block hidden" data-seccion="4">
                             <div class="container-card">
@@ -877,7 +851,6 @@
                 </div>
             </div>
         </section>
-
         <!-- FORMULARIO -->
         <section id="contact">
             <!-- Imagen Superior de la olita xd -->
@@ -953,9 +926,7 @@
                 </div>
             </div>
         </section>
-
     </main>
-
     <!-- PIE DE PÁGINA-->
     <footer>
         <div class="edificios">
@@ -1000,14 +971,27 @@
                     <div class="conteiner-inputs">
                         <label class="login-label" for="email">Correo</label>
                     </div>
-                    <input class="login-input" type="email" id="email" placeholder="example@gmail.com"
-                        required>
+                    <input class="login-input" type="email" id="email" placeholder="example@gmail.com" required>
                     <div class="conteiner-inputs">
                         <label class="login-label" for="contrasenia">Contraseña</label>
                     </div>
-                    <input class="login-input" type="password" id="contrasenia" placeholder="**********"
-                    required>
+                    <input class="login-input" type="password" id="contrasenia" placeholder="**********" required>
                     <button id="boton-login" class="boton-login" type="submit">ENVIAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carrito-section" style="display: none;">
+        <div class="card-login">
+            <div class="contenedor-img-login">
+                <img src="./img/img-footer/ciudad.png" alt="" class="ciudad-login">
+                <div class="contenedor-foodtruck">
+                    <img src="./img/img-footer/foodtruck.png" alt="" class="foodtruck-login">
+                </div>
+                <div class="img-login-conteiner">
+                    <img src="./img/LOGOBLANCO.svg" alt="" class="logo-blanco-login">
+                    <p class="picaycorre-login">PICA Y CORRE</p>
+                    <button class="login-out" onclick=carrito()>X</button>
                 </div>
             </div>
         </div>

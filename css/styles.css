@@ -56,6 +56,10 @@ header{
     z-index: 10;
 }
 
+.navbar{
+   border: none; 
+}
+
 .navbarDesktop {
     display: flex;
     width: 90vw;
@@ -90,7 +94,27 @@ header{
 .opciones {
     margin: 0 20px;
 }
-
+.carritoButton {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color-btn);
+    padding-left: 13px;
+    padding-right: 15px;
+    border-radius: 100px;
+    margin-top: 10px;
+    border: 0;
+    height: 62px;
+    width: 60px;
+}
+#carrito-section{
+    position: fixed;
+    z-index: 999;
+    inset: 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000b3;
+}
 /* Mobile */
 
 #opcionesMobile {

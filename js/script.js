@@ -71,7 +71,14 @@ $(document).ready(function () {
 
 
 });
-
+function carrito() {
+  let carrito = document.getElementById('carrito-section');
+  if (carrito.style.display == "none") {
+    carrito.style.display = "flex"
+  } else {
+    carrito.style.display = "none"
+  }
+}
 
 /* ********************************** */
 /*            BANNER                  */
@@ -152,9 +159,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll('.btn-plus');
+  const carrito = document.querySelectorAll('.carritoButton');
   buttons.forEach(button =>{
     button.addEventListener('click', () => {
       button.parentElement.innerHTML='<button class="btn-cantidad-menos btn-cantidad">-</button><p class="cantidad" id='+ String(button.id) +'>1</p><button class="btn-cantidad-mas btn-cantidad">+</button>'
+      carrito.forEach(c =>{
+        c.style.display = "flex"
+      })
       const btnMenos = document.querySelectorAll('.btn-cantidad-menos');
       const btnMas = document.querySelectorAll('.btn-cantidad-mas');
       btnMas.forEach(btnm =>{
@@ -170,6 +181,9 @@ document.addEventListener("DOMContentLoaded", function () {
           cantidad = btnm.nextSibling.innerHTML
           if (Number(cantidad) == 1) {
             btnm.parentElement.innerHTML ='<button class="btn-plus" id='+ String(button.id) +'>+</button>'
+            carrito.forEach(c =>{
+              c.style.display = "none"
+            })
           }
           else{
             btnm.nextSibling.innerHTML = Number(cantidad) - 1

@@ -69,6 +69,18 @@
                     <a href="#login" class="opciones nav-link" onclick=login()>Log In</a>
                 </div>
             </nav>
+            <!-- Mobile -->
+            <nav class="navbarMobile">
+                <button class="menuButton" onclick=turnDesplegable(true)>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" id="menuLogo">
+                        <path
+                            d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
+                        </path>
+                    </svg>
+                </button>
+                <a class="logoMobile" href="#banner">
+                    <img src="img/LOGO.svg" alt="Logo" id="logoMobile">
+            </nav>
             <!-- Carrito -->
             <button class="carritoButton" style="display: none;" onclick=carrito()>
                 <svg height="30px" width="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -83,21 +95,6 @@
                     </g>
                 </svg>
             </button>
-        </div>
-        <!-- Mobile -->
-        <div class="navbar">
-            <nav class="navbarMobile">
-                <button class="menuButton" onclick=turnDesplegable(true)>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" id="menuLogo">
-                        <path
-                            d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
-                        </path>
-                    </svg>
-                </button>
-                <a class="logoMobile" href="#banner">
-                    <img src="img/LOGO.svg" alt="Logo" id="logoMobile">
-                    <!--<p>PICA Y CORRE</p>  -->
-            </nav>
         </div>
         <!-- Desplegable Navbar Mobile -->
         <div id="fondoOscuro" class="navbarCerrado"></div>
@@ -844,9 +841,7 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -947,17 +942,17 @@
             </div>
         </div>
     </footer>
-    <div id="login" style="display: none;">
-        <div class="card-login">
+    <div id="login" style="display: none;" class="modal-bg">
+        <div class="modal">
             <div class="contenedor-img-login">
                 <img src="./img/img-footer/ciudad.png" alt="" class="ciudad-login">
                 <div class="contenedor-foodtruck">
                     <img src="./img/img-footer/foodtruck.png" alt="" class="foodtruck-login">
                 </div>
-                <div class="img-login-conteiner">
-                    <img src="./img/LOGOBLANCO.svg" alt="" class="logo-blanco-login">
-                    <p class="picaycorre-login">PICA Y CORRE</p>
-                    <button class="login-out" onclick=login()>X</button>
+                <div class="header-modal">
+                    <img src="./img/LOGOBLANCO.svg" alt="" class="logo-blanco-modal">
+                    <p class="picaycorre-modal" style="color: #EFF6F5;">PICA Y CORRE</p>
+                    <button class="modal-out" onclick=login()>X</button>
                 </div>
             </div>
             <div class="contenedor-login">
@@ -981,18 +976,12 @@
             </div>
         </div>
     </div>
-    <div id="carrito-section" style="display: none;">
-        <div class="card-login">
-            <div class="contenedor-img-login">
-                <img src="./img/img-footer/ciudad.png" alt="" class="ciudad-login">
-                <div class="contenedor-foodtruck">
-                    <img src="./img/img-footer/foodtruck.png" alt="" class="foodtruck-login">
-                </div>
-                <div class="img-login-conteiner">
-                    <img src="./img/LOGOBLANCO.svg" alt="" class="logo-blanco-login">
-                    <p class="picaycorre-login">PICA Y CORRE</p>
-                    <button class="login-out" onclick=carrito()>X</button>
-                </div>
+    <div id="carrito-section" style="display: none;" class="modal-bg">
+        <div class="modal">
+            <div class="header-modal">
+                <img src="./img/LOGO.svg" alt="" class="logo-blanco-modal">
+                <p class="picaycorre-modal">PICA Y CORRE</p>
+                <button class="modal-out" onclick=carrito()>X</button>
             </div>
         </div>
     </div>

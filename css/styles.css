@@ -39,13 +39,6 @@ header a {
 
 header a.active{
     font-weight: bolder;
-  }
-  
-
-
-
-header a:active{
-    font-weight: bold;
 }
 
 header{
@@ -57,7 +50,10 @@ header{
 }
 
 .navbar{
-   border: none; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
 }
 
 .navbarDesktop {
@@ -107,7 +103,7 @@ header{
     height: 62px;
     width: 60px;
 }
-#carrito-section{
+.modal-bg{
     position: fixed;
     z-index: 999;
     inset: 0px;
@@ -115,6 +111,39 @@ header{
     align-items: center;
     background-color: #000000b3;
 }
+.modal{
+    height: 75%;
+    width: 30%;
+    background-color: var(--color-background-claro);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+.header-modal{
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+}
+.logo-blanco-modal{
+    height:60px;
+    width: 60px;
+}
+.picaycorre-modal{
+    font-family: var(--text-titulos);
+    font-size: 30px;
+    margin-top: 10px;
+}
+.modal-out{
+    border-radius: 99px;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    color: var(--color-textbtn);
+    background-color: var(--color-btn);
+    border: none;
+    text-align: center;
+}
+
 /* Mobile */
 
 #opcionesMobile {
@@ -1023,7 +1052,6 @@ form{
         display: flex;
         justify-content: space-between;
         width: 100vw;
-        position: fixed;
     }
 
     .menuButton {
@@ -1035,6 +1063,9 @@ form{
         border-radius: 100px;
         margin: 10px;
         border: 0;
+    }
+    .carritoButton {
+        margin: 10px;
     }
 
 
@@ -1314,22 +1345,6 @@ form{
 
 /* ********************************** */
 /*     REGISTRARSE/INICIO SESION     */
-#login{
-    position: fixed;
-    z-index: 999;
-    inset: 0px;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000b3;
-}
-.card-login{
-    height: 75%;
-    width: 30%;
-    background-color: var(--color-background-claro);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-}
 .contenedor-img-login{
     height: 50%;
     width: 100%;
@@ -1345,11 +1360,6 @@ form{
     align-items: center;
     justify-content: center;
     margin-top: 16px;
-}
-.img-login-conteiner{
-    display: flex;
-    justify-content: space-between;
-    padding: 18px;
 }
 .ciudad-login{
     position: absolute;
@@ -1367,26 +1377,6 @@ form{
     bottom: 10px;
     width: 40%;
     height: 45%;
-}
-.logo-blanco-login{
-    height:60px;
-    width: 60px;
-}
-.picaycorre-login{
-    font-family: var(--text-titulos);
-    color: var(--color-titulos-oscuro);
-    font-size: 30px;
-    margin-top: 10px;
-}
-.login-out{
-    border-radius: 99px;
-    font-size: 22px;
-    width: 40px;
-    height: 40px;
-    color: var(--color-textbtn);
-    background-color: var(--color-btn);
-    border: none;
-    text-align: center;
 }
 .titulo-login{
     font-family: var(--text-titulos);
@@ -1441,7 +1431,7 @@ form{
     .contenedor-login{
         margin-top: 12px;
     }
-    .img-login-conteiner{
+    .header-modal{
         padding: 10px;
     }
     .ciudad-login{
@@ -1454,15 +1444,15 @@ form{
         width: 40%;
         height: 45%;
     }
-    .logo-blanco-login{
+    .logo-blanco-modal{
         height:50px;
         width: 50px;
     }
-    .picaycorre-login{
+    .picaycorre-modal{
         font-size: 21px;
         margin-top: 10px;
     }
-    .login-out{
+    .modal-out{
         border-radius: 99px;
         font-size: 18px;
         width: 30px;
@@ -1489,14 +1479,14 @@ form{
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .card-login{
+    .modal{
         height: 65%;
         width: 40%;
     }
     .contenedor-login{
         margin-top: 8px;
     }
-    .img-login-conteiner{
+    .header-modal{
         padding: 10px;
     }
     .ciudad-login{
@@ -1509,15 +1499,15 @@ form{
         width: 40%;
         height: 45%;
     }
-    .logo-blanco-login{
+    .logo-blanco-modal{
         height:40px;
         width: 40px;
     }
-    .picaycorre-login{
+    .picaycorre-modal{
         font-size: 17px;
         margin-top: 10px;
     }
-    .login-out{
+    .modal-out{
         border-radius: 99px;
         font-size: 12px;
         width: 22px;
@@ -1544,14 +1534,14 @@ form{
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .card-login{
+    .modal{
         height: 50%;
         width: 70%;
     }
     .contenedor-login{
         margin-top: 3px;
     }
-    .img-login-conteiner{
+    .header-modal{
         padding: 8px;
     }
     .ciudad-login{
@@ -1564,15 +1554,15 @@ form{
         width: 50%;
         height: 55%;
     }
-    .logo-blanco-login{
+    .logo-blanco-modal{
         height:30px;
         width: 30px;
     }
-    .picaycorre-login{
+    .picaycorre-modal{
         font-size: 14px;
         margin-top: 5px;
     }
-    .login-out{
+    .modal-out{
         border-radius: 99px;
         font-size: 12px;
         width: 22px;
@@ -1599,14 +1589,14 @@ form{
     }
 }
 @media only screen and (min-width: 375px) and (max-width: 575px){
-    .card-login{
+    .modal{
         height: 50%;
         width: 70%;
     }
     .contenedor-login{
         margin-top: 0px;
     }
-    .img-login-conteiner{
+    .header-modal{
         padding: 8px;
     }
     .ciudad-login{
@@ -1619,15 +1609,15 @@ form{
         width: 50%;
         height: 55%;
     }
-    .logo-blanco-login{
+    .logo-blanco-modal{
         height:30px;
         width: 30px;
     }
-    .picaycorre-login{
+    .picaycorre-modal{
         font-size: 14px;
         margin-top: 5px;
     }
-    .login-out{
+    .modal-out{
         border-radius: 99px;
         font-size: 12px;
         width: 22px;
@@ -1654,14 +1644,14 @@ form{
     }
 }
 @media (max-width:374px){
-    .card-login{
+    .modal{
         height: 50%;
         width: 70%;
     }
     .contenedor-login{
         margin-top: 0px;
     }
-    .img-login-conteiner{
+    .header-modal{
         padding: 8px;
     }
     .ciudad-login{
@@ -1674,15 +1664,15 @@ form{
         width: 50%;
         height: 55%;
     }
-    .logo-blanco-login{
+    .logo-blanco-modal{
         height:30px;
         width: 30px;
     }
-    .picaycorre-login{
+    .picaycorre-modal{
         font-size: 14px;
         margin-top: 5px;
     }
-    .login-out{
+    .modal-out{
         border-radius: 99px;
         font-size: 12px;
         width: 22px;
